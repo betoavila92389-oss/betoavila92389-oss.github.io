@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Gestor Escolar</title>
+<meta name="description" content="Última versión de la aplicación Gestor Escolar para el teléfono de la dirección.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+  <div class="caja">
+    <h1>Descargar la aplicación</h1>
+    <p>Gestor Escolar · Escuela Primaria María G. de Ortiz No. 2571</p>
+    <nav style="margin-top:16px"><a href="index.html">Volver al inicio</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="tarjeta destacado">
+    <h2 style="margin-top:0">Última versión</h2>
+    <p id="version" style="font-size:1.2rem;margin:8px 0"><strong>—</strong></p>
+    <p id="fecha" style="color:var(--suave);margin:0 0 4px"></p>
+    <p id="notas" style="margin:12px 0"></p>
+    <p style="margin-top:20px">
+      <a id="descargar" href="#" style="display:inline-block;background:var(--azul);color:#fff;
+         padding:14px 24px;border-radius:16px;text-decoration:none;font-weight:600">
+        Descargar el APK
+      </a>
+    </p>
+    <p id="peso" style="color:var(--suave);font-size:.9rem"></p>
+  </div>
+
+  <h2>Cómo se instala</h2>
+  <ol>
+    <li>Descargue el archivo desde el propio teléfono.</li>
+    <li>Ábralo desde la notificación de descarga o desde «Mis archivos».</li>
+    <li>Si Android avisa que no puede instalar aplicaciones desconocidas, permítalo para el navegador o para «Mis archivos». Es normal: la aplicación no viene de la tienda.</li>
+    <li>Se instala <strong>encima de la que ya está</strong> y no se pierde nada, porque va firmada con la misma llave.</li>
+  </ol>
+
+  <div class="tarjeta">
+    <p style="margin:0">
+      <strong>Antes de actualizar, saque un respaldo</strong> desde Ajustes → Respaldo. Nunca
+      ha hecho falta, pero cuesta un minuto y ahí está la escuela entera.
+    </p>
+  </div>
+
+  <p style="color:var(--suave);font-size:.9rem">
+    ¿No sabe cuál bajar? El de <code>arm64-v8a</code> sirve en cualquier teléfono de 2018 en
+    adelante. El <code>universal</code> pesa el doble y solo hace falta si el otro no instala.
+  </p>
+
+  <div class="pie">
+    <p><a href="index.html">Inicio</a> · <a href="privacidad.html">Política de privacidad</a></p>
+  </div>
+</main>
+
+<script>
+// La misma información que consulta la app para saber si hay versión nueva.
+fetch("version.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (v) {
+    document.getElementById("version").innerHTML =
+      "<strong>" + v.versionName + "</strong> (compilación " + v.versionCode + ")";
+    document.getElementById("fecha").textContent = "Publicada el " + v.fecha + ".";
+    document.getElementById("notas").textContent = v.notas || "";
+    var enlace = document.getElementById("descargar");
+    enlace.href = v.url;
+    enlace.setAttribute("download", "");
+    if (v.pesoMb) {
+      document.getElementById("peso").textContent = "Pesa " + v.pesoMb + " MB.";
+    }
+  })
+  .catch(function () {
+    document.getElementById("version").textContent =
+      "No se pudo leer la información de la versión. Recargue la página.";
+  });
+</script>
+</body>
+</html>
