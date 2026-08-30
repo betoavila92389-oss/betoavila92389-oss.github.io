@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestor Escolar María G. de Ortiz</title>
+<meta name="description" content="Aplicación Android de uso interno para la dirección de la Escuela Primaria María G. de Ortiz No. 2571, de Meoqui, Chihuahua.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+  <div class="caja">
+    <h1>Gestor Escolar</h1>
+    <p>Escuela Primaria María G. de Ortiz No. 2571 · Meoqui, Chihuahua</p>
+    <nav style="margin-top:16px"><a href="privacidad.html">Política de privacidad</a></nav>
+  </div>
+</header>
+
+<main>
+  <p>
+    <strong>Gestor Escolar</strong> es una aplicación Android de <strong>uso interno</strong>
+    para la dirección de la escuela. Sirve para llevar el expediente de los alumnos, la
+    plantilla del personal, las planeaciones didácticas, la agenda escolar y el Programa
+    Escolar de Mejora Continua, bajo el marco de la Nueva Escuela Mexicana.
+  </p>
+
+  <div class="tarjeta destacado">
+    <p style="margin:0">
+      No se distribuye en ninguna tienda de aplicaciones y no está abierta al público: la
+      usa una sola persona, el director del plantel, en el teléfono de la dirección.
+    </p>
+  </div>
+
+  <h2>Cómo está hecha</h2>
+  <ul>
+    <li><strong>Toda la información vive en el teléfono</strong>, cifrada. No hay servidor, no hay cuentas de usuario y no hay nube donde se guarden los datos de la escuela.</li>
+    <li>La base de datos se cifra con SQLCipher y los archivos con AES-256-GCM. La llave se deriva del PIN del director y nunca sale del aparato.</li>
+    <li>Se abre con PIN o con huella, se bloquea sola a los pocos minutos y no permite capturas de pantalla.</li>
+    <li>No lleva publicidad, no lleva analítica y no lleva ningún reporte de fallos.</li>
+  </ul>
+
+  <h2>Lo único que sale del teléfono</h2>
+  <ul>
+    <li><strong>Las planeaciones que el director manda a revisar</strong> con la inteligencia
+      artificial de Google (Gemini), cuando él lo pide y después de aceptar un aviso. Los
+      datos personales se quitan antes del envío.</li>
+    <li><strong>El respaldo cifrado</strong>, si el director enciende el respaldo automático a
+      su Google Drive. El archivo viaja <em>ya cifrado</em> con sus doce palabras de
+      recuperación: Google guarda un bulto que no puede abrir.</li>
+  </ul>
+  <p>Fuera de esas dos cosas, la aplicación no se comunica con nadie.</p>
+
+  <div class="pie">
+    <p>
+      Responsable: dirección de la Escuela Primaria María G. de Ortiz No. 2571, Meoqui,
+      Chihuahua, México.
+    </p>
+    <p><a href="privacidad.html">Política de privacidad</a></p>
+  </div>
+</main>
+</body>
+</html>

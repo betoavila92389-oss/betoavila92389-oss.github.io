@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Gestor Escolar</title>
+<meta name="description" content="Política de privacidad de la aplicación Gestor Escolar, de la Escuela Primaria María G. de Ortiz No. 2571.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+  <div class="caja">
+    <h1>Política de privacidad</h1>
+    <p>Aplicación <strong>Gestor Escolar</strong> · Escuela Primaria María G. de Ortiz No. 2571</p>
+    <nav style="margin-top:16px"><a href="index.html">Volver al inicio</a></nav>
+  </div>
+</header>
+
+<main>
+  <p><em>Última actualización: 30 de agosto de 2026.</em></p>
+
+  <p>
+    <strong>Gestor Escolar</strong> es una aplicación Android de uso interno de la dirección
+    de la Escuela Primaria María G. de Ortiz No. 2571, de Ciudad Meoqui, Chihuahua, México.
+    No se distribuye al público y la utiliza únicamente el director del plantel.
+  </p>
+
+  <div class="tarjeta destacado">
+    <p style="margin:0">
+      <strong>La aplicación no tiene servidores.</strong> No se crea ninguna cuenta, no se
+      envía la información de la escuela a ningún servicio y quien desarrolla la aplicación
+      no tiene acceso a esa información en ningún momento.
+    </p>
+  </div>
+
+  <h2>1. Qué información se maneja</h2>
+  <p>Para el trabajo de la dirección escolar, la aplicación guarda:</p>
+  <ul>
+    <li>datos de los alumnos y de sus familias (nombre, CURP, fecha de nacimiento, grado y grupo, domicilio, teléfono, documentos del expediente y fotografía);</li>
+    <li>datos del personal del plantel (nombre, CURP, RFC, función, asignaciones de grupo, licencias y documentos);</li>
+    <li>planeaciones didácticas, documentos rectores, agenda escolar y bitácora de la dirección.</li>
+  </ul>
+
+  <h2>2. Dónde se guarda</h2>
+  <p>
+    <strong>Toda esa información vive exclusivamente en la memoria interna del teléfono de la
+    dirección, y vive cifrada.</strong> La base de datos se cifra con SQLCipher y cada archivo
+    con AES-256-GCM. La llave de cifrado se deriva del PIN del director mediante
+    PBKDF2-HMAC-SHA256 y se guarda protegida por el almacén de llaves de Android; no se
+    envía a ningún lado ni existe copia fuera del aparato.
+  </p>
+  <p>
+    La aplicación se abre con PIN o huella, se bloquea sola tras unos minutos de inactividad
+    y bloquea las capturas de pantalla. Tras varios intentos fallidos puede borrar los datos
+    de forma segura.
+  </p>
+
+  <h2>3. Qué sale del teléfono, y solo si el director lo pide</h2>
+
+  <h3>3.1 Revisión de planeaciones con inteligencia artificial</h3>
+  <p>
+    Cuando el director pide que una planeación didáctica se revise con la API de Gemini, de
+    Google, el texto viaja a los servidores de Google para ese análisis. Antes de cada envío
+    se muestra un aviso que el director debe aceptar, y un filtro sustituye CURP, RFC,
+    teléfonos, correos, códigos postales y nombres por marcas genéricas. Si detecta algo que
+    no pudo ocultar, bloquea el envío.
+  </p>
+  <p>
+    Hay dos excepciones que el propio director autorizó y que la aplicación advierte en rojo
+    antes de enviar: el archivo de la planeación puede viajar completo cuando se pide que la
+    inteligencia artificial lo lea directamente, y los mensajes que se redactan para el
+    personal llevan el nombre de la persona a la que van dirigidos.
+  </p>
+  <p>Estos envíos se rigen además por la política de privacidad de Google.</p>
+
+  <h3>3.2 Respaldo en Google Drive</h3>
+  <p>
+    Si el director enciende el respaldo automático hacia su Google Drive, la aplicación sube
+    un archivo de respaldo. <strong>Ese archivo ya va cifrado</strong> con una llave derivada
+    de las doce palabras de recuperación del director: Google almacena un contenido que no
+    puede abrir, y las palabras nunca salen del teléfono.
+  </p>
+  <p>
+    Para eso la aplicación solicita el permiso
+    <code>https://www.googleapis.com/auth/drive.file</code>, que da acceso <em>únicamente a
+    los archivos que la propia aplicación crea</em>. La aplicación no puede ver, leer ni
+    modificar ningún otro archivo del Drive del usuario, y solo se usa para escribir y
+    recuperar sus respaldos. También se lee la dirección de correo de la cuenta elegida, para
+    mostrar en la pantalla de ajustes a qué cuenta se está respaldando.
+  </p>
+  <p>
+    El respaldo se puede apagar en cualquier momento desde la propia aplicación; al apagarlo
+    se borra el permiso guardado. Los archivos ya subidos se administran desde el Drive del
+    usuario. Alternativamente el respaldo puede escribirse en una carpeta del teléfono, sin
+    usar Google.
+  </p>
+
+  <h3>3.3 WhatsApp</h3>
+  <p>
+    La aplicación nunca envía mensajes sola. Redacta el texto, se lo muestra al director para
+    que lo revise y, si él acepta, abre WhatsApp con ese texto listo. El envío lo hace la
+    persona, dentro de WhatsApp.
+  </p>
+
+  <h2>4. Lo que la aplicación no hace</h2>
+  <ul>
+    <li>No incluye publicidad ni redes de anuncios.</li>
+    <li>No incluye analítica, estadísticas de uso ni reportes de fallos.</li>
+    <li>No comparte, vende ni transfiere información a terceros.</li>
+    <li>No usa la información para entrenar modelos de inteligencia artificial.</li>
+    <li>No accede a la ubicación, a los contactos ni al micrófono. Usa la cámara solo cuando el director toma una fotografía o escanea un documento.</li>
+  </ul>
+
+  <h2>5. Menores de edad</h2>
+  <p>
+    La aplicación no la usan menores de edad: es una herramienta administrativa del director.
+    Sí resguarda datos de alumnos menores, y por eso todo se guarda cifrado en el aparato,
+    nunca se publica y no viaja a ningún servicio. En los documentos que salen de la escuela,
+    como las actas de hechos, los nombres de los menores se imprimen con iniciales.
+  </p>
+
+  <h2>6. Conservación y borrado</h2>
+  <p>
+    La información permanece en el teléfono mientras la dirección la necesite. El director
+    puede eliminar cualquier archivo desde la propia aplicación —se sobrescribe antes de
+    borrarse— y desinstalarla elimina toda la información del aparato. Como no hay servidores,
+    no queda ninguna copia en poder de nadie más.
+  </p>
+
+  <h2>7. Cambios en esta política</h2>
+  <p>
+    Si la aplicación cambia lo que envía o los permisos que solicita, esta página se
+    actualizará con la fecha correspondiente.
+  </p>
+
+  <h2>8. Contacto</h2>
+  <p>
+    Responsable del tratamiento: dirección de la Escuela Primaria María G. de Ortiz No. 2571,
+    Ciudad Meoqui, Chihuahua, México. Para cualquier duda sobre esta política puede acudir
+    directamente a la dirección del plantel.
+  </p>
+
+  <div class="pie">
+    <p><a href="index.html">Volver al inicio</a></p>
+  </div>
+</main>
+</body>
+</html>
