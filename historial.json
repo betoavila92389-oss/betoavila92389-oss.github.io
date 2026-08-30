@@ -1,5 +1,21 @@
 [
   {
+    "versionCode": 5,
+    "versionName": "1.2",
+    "fecha": "30 de agosto de 2026",
+    "pesoMb": 54,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.2-5/gestor-escolar-1.2-5-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.2-5/gestor-escolar-1.2-5-universal.apk",
+    "notas": "Ahora se puede ver qué trae cada versión antes de instalarla.",
+    "cambios": [
+      "El aviso de versión nueva enseña la lista de lo que trae y de lo que se arregló.",
+      "La página guarda el historial completo: cada versión con sus cambios y su descarga."
+    ],
+    "correcciones": [
+      "Nada que arreglar esta vez: es una versión de mejoras."
+    ]
+  },
+  {
     "versionCode": 4,
     "versionName": "1.1",
     "fecha": "30 de agosto de 2026",
