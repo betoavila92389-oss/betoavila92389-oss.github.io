@@ -1,0 +1,35 @@
+[
+  {
+    "versionCode": 4,
+    "versionName": "1.1",
+    "fecha": "30 de agosto de 2026",
+    "pesoMb": 54,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.1-4/gestor-escolar-1.1-4-arm64-v8a.apk",
+    "notas": "La app ya avisa sola cuando hay una versión nueva, en Ajustes → Acerca de.",
+    "cambios": [
+      "Ajustes → Acerca de dice qué versión tiene y si ya salió una más nueva, con la descarga a un toque."
+    ],
+    "correcciones": []
+  },
+  {
+    "versionCode": 3,
+    "versionName": "1.0",
+    "fecha": "30 de agosto de 2026",
+    "pesoMb": 54,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.0-3/gestor-escolar-1.0-3-arm64-v8a.apk",
+    "notas": "Primera versión de producción, firmada con la llave de la escuela.",
+    "cambios": [
+      "Un evento de la agenda puede ser de varias personas, y a cada una se le avisa por WhatsApp desde su renglón.",
+      "El programa analítico se abre por grupo, y la planeación de cada docente se revisa contra el de su grupo.",
+      "En Ajustes → Rúbrica se elige con qué documentos se revisa una planeación.",
+      "Cuando Gemini no contesta, cada análisis deja sacar el prompt completo para llevárselo a otra inteligencia artificial y pegar de vuelta su respuesta.",
+      "El último error de Google queda escrito en Ajustes → Inteligencia artificial."
+    ],
+    "correcciones": [
+      "El acercamiento del visor crece desde donde están los dedos y ya se recorre el documento entero: antes crecía desde la esquina y solo se movía lo que ya se veía.",
+      "«Elegir de la galería» abre la galería del teléfono y no el explorador de documentos.",
+      "El calendario cambia de mes al deslizar el dedo.",
+      "Las respuestas de Gemini ya no llegan cortadas: el modelo se gastaba el presupuesto pensando."
+    ]
+  }
+]
