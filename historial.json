@@ -1,5 +1,19 @@
 [
   {
+    "versionCode": 6,
+    "versionName": "1.2.1",
+    "fecha": "31 de agosto de 2026",
+    "pesoMb": 54,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.2.1-6/gestor-escolar-1.2.1-6-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.2.1-6/gestor-escolar-1.2.1-6-universal.apk",
+    "notas": "Corrige la edicion de las personas que entraron por la plantilla.",
+    "cambios": [],
+    "correcciones": [
+      "Editar a un docente que entro por CSV ya no dice «se guardo la persona, pero los grupos no: ese docente ya no existe»: sus grupos se guardan bien.",
+      "El mismo defecto estaba escondido al editar alumnos, tutores, contactos, incidencias, eventos, notas de bitacora y planeaciones; ya no aparece en ninguno."
+    ]
+  },
+  {
     "versionCode": 5,
     "versionName": "1.2",
     "fecha": "30 de agosto de 2026",
