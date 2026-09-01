@@ -1,5 +1,19 @@
 [
   {
+    "versionCode": 7,
+    "versionName": "1.3",
+    "fecha": "1 de septiembre de 2026",
+    "pesoMb": 54,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.3-7/gestor-escolar-1.3-7-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/v1.3-7/gestor-escolar-1.3-7-universal.apk",
+    "notas": "Al recordar una planeacion se pueden agregar otros pendientes al mismo mensaje.",
+    "cambios": [
+      "Al recordarle a un docente la planeacion que falta, ahora se pueden agregar otros recordatorios y la IA los redacta todos en un solo mensaje.",
+      "En el envio por lotes los recordatorios se escriben una sola vez y valen para todos los que faltan."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 6,
     "versionName": "1.2.1",
     "fecha": "31 de agosto de 2026",
