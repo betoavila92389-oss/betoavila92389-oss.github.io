@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Sello Digital 2571</title>
+<meta name="description" content="Última versión de la aplicación Sello Digital 2571 para el teléfono de la dirección.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <div class="caja">
+    <h1>Descargar la aplicación</h1>
+    <p>Sello Digital 2571 · Escuela Primaria "María G. de Ortiz"</p>
+    <nav style="margin-top:16px"><a href="index.html">Inicio</a><a href="historial.html">Historial de versiones</a></nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="tarjeta destacada">
+    <h2>Última versión</h2>
+    <p id="version" style="font-size:1.2rem;margin:8px 0"><strong>—</strong></p>
+    <p id="fecha" class="fecha" style="margin:0 0 4px"></p>
+    <p id="notas" style="margin:12px 0"></p>
+    <p style="margin-top:20px">
+      <a id="descargar" class="boton" href="#">Descargar el APK</a>
+    </p>
+    <p id="peso" class="fecha"></p>
+    <p style="margin:16px 0 0">
+      <a id="universal" class="boton tenue" href="#">Descargar la versión universal</a>
+    </p>
+  </div>
+
+  <div class="aviso cuidado" id="aviso-primera">
+    <strong>Solo para la versión 1.0:</strong> esta es la primera versión firmada. Si en su
+    teléfono trae puesta una versión de pruebas, Android <strong>no</strong> la deja instalar
+    encima: hay que desinstalar primero, y al desinstalar <strong>se borran el historial y los
+    PDF guardados en el teléfono</strong>. Antes de hacerlo, exporte el historial a CSV y
+    respalde en Drive desde Ajustes. De la 1.0 en adelante ya no vuelve a pasar: todas las
+    versiones siguientes se instalan encima sin perder nada.
+  </div>
+
+  <h2>Cómo se instala</h2>
+  <ol>
+    <li>Abra esta página <strong>desde el propio teléfono</strong> y toque «Descargar el APK».</li>
+    <li>Ábralo desde la notificación de descarga o desde «Mis archivos».</li>
+    <li>Si Android avisa que no puede instalar aplicaciones desconocidas, permítalo para el
+        navegador. Es normal: la aplicación no viene de la tienda.</li>
+    <li>Se instala encima de la que ya está y no se pierde nada, porque va firmada con la
+        misma llave.</li>
+  </ol>
+
+  <p class="fecha">
+    ¿Cuál bajar? El normal (<code>arm64-v8a</code>) sirve en cualquier teléfono de 2018 en
+    adelante y pesa menos de la mitad. El universal solo hace falta si el otro no instala.
+  </p>
+
+  <div class="aviso">
+    <strong>La aplicación avisa sola.</strong> Cuando se publique una versión nueva, la
+    pantalla de inicio le muestra el aviso. También puede revisarlo cuando quiera en
+    Ajustes → Acerca de → «Buscar si hay versión nueva».
+  </div>
+
+</main>
+
+<footer>
+  <div class="caja">
+    <a href="index.html">Inicio</a>
+    <a href="historial.html">Historial de versiones</a>
+    <a href="privacidad.html">Aviso de privacidad</a>
+  </div>
+</footer>
+
+<script>
+// La misma información que consulta la app para saber si hay versión nueva.
+fetch("version.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (v) {
+    document.getElementById("version").innerHTML =
+      "<strong>" + v.versionName + "</strong> (compilación " + v.versionCode + ")";
+    document.getElementById("fecha").textContent = "Publicada el " + v.fecha + ".";
+    document.getElementById("notas").textContent = v.notas || "";
+    var enlace = document.getElementById("descargar");
+    enlace.href = v.url;
+    enlace.setAttribute("download", "");
+    var otro = document.getElementById("universal");
+    if (v.urlUniversal) {
+      otro.href = v.urlUniversal;
+      otro.setAttribute("download", "");
+    } else {
+      otro.parentNode.remove();
+    }
+    if (v.pesoMb) {
+      document.getElementById("peso").textContent = "Pesa " + v.pesoMb + " MB.";
+    }
+    if (v.versionCode > 1) {
+      var aviso = document.getElementById("aviso-primera");
+      if (aviso) aviso.remove();
+    }
+  })
+  .catch(function () {
+    document.getElementById("version").textContent =
+      "No se pudo leer la información de la versión. Recargue la página.";
+  });
+</script>
+
+</body>
+</html>

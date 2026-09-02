@@ -1,0 +1,22 @@
+{
+  "versionCode": 1,
+  "versionName": "1.0",
+  "fecha": "2 de septiembre de 2026",
+  "pesoMb": 35,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.0-1/sello-digital-1.0-1-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.0-1/sello-digital-1.0-1-universal.apk",
+  "notas": "Primera versión firmada: escanear el QR de un oficio, cotejarlo contra el servidor y firmarlo con la huella.",
+  "cambios": [
+    "Validar un oficio: se lee el código QR del papel, la app pide al servidor los datos con que Word lo generó y los muestra para compararlos. La app nunca captura ni edita esos datos.",
+    "Firma con huella o PIN del teléfono. Sin autenticación no se valida.",
+    "Historial con pestañas de pendientes de entrega y entregados, buscador y detalle de cada oficio.",
+    "Registro de entrega escaneando el oficio con el sello de recibido.",
+    "Lecturas del código QR: cuántas veces se escaneó, cuándo y desde qué ciudad, con aviso si parece que circulan fotocopias.",
+    "Cotejo automático con inteligencia artificial (opcional, con llave propia de Gemini): avisa si el papel no dice lo mismo que el servidor.",
+    "Respaldo de los PDF en Google Drive, por año y mes (opcional).",
+    "Ajustes completos: escuela y logo, director, tema claro u oscuro, letra grande, servidor, IA, respaldo y seguridad.",
+    "Pantalla de bienvenida en pasos la primera vez que se abre.",
+    "Aviso en la pantalla de inicio cuando se publica una versión nueva."
+  ],
+  "correcciones": []
+}

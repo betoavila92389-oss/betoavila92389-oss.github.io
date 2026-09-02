@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Historial de versiones — Sello Digital 2571</title>
+<meta name="description" content="Qué cambió y qué se arregló en cada versión de Sello Digital 2571.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <div class="caja">
+    <h1>Historial de versiones</h1>
+    <p>Sello Digital 2571 · Escuela Primaria "María G. de Ortiz"</p>
+    <nav style="margin-top:16px"><a href="index.html">Inicio</a><a href="descargas.html">Descargar</a></nav>
+  </div>
+</header>
+
+<main>
+  <p id="cargando">Cargando el historial…</p>
+  <div id="lista"></div>
+
+  <div class="aviso">
+    Cada versión se instala encima de la anterior sin perder información. La aplicación avisa
+    sola cuando hay una nueva, y también se puede revisar en Ajustes → Acerca de.
+  </div>
+</main>
+
+<footer>
+  <div class="caja">
+    <a href="index.html">Inicio</a>
+    <a href="descargas.html">Descargar</a>
+    <a href="privacidad.html">Aviso de privacidad</a>
+  </div>
+</footer>
+
+<script>
+function elemento(etiqueta, texto, clase) {
+  var e = document.createElement(etiqueta);
+  if (texto) e.textContent = texto;
+  if (clase) e.className = clase;
+  return e;
+}
+
+function apartado(titulo, renglones) {
+  if (!renglones || !renglones.length) return null;
+  var caja = elemento("div", null, "apartado");
+  caja.appendChild(elemento("h3", titulo));
+  var lista = document.createElement("ul");
+  renglones.forEach(function (r) { lista.appendChild(elemento("li", r)); });
+  caja.appendChild(lista);
+  return caja;
+}
+
+fetch("historial.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (versiones) {
+    document.getElementById("cargando").remove();
+    var lista = document.getElementById("lista");
+    versiones.forEach(function (v, i) {
+      var tarjeta = elemento("div", null, "tarjeta" + (i === 0 ? " destacada" : ""));
+      var titulo = document.createElement("h2");
+      titulo.appendChild(document.createTextNode("Versión " + v.versionName + " (" + v.versionCode + ")"));
+      if (i === 0) titulo.appendChild(elemento("span", "la más reciente", "etiqueta"));
+      tarjeta.appendChild(titulo);
+      tarjeta.appendChild(elemento("p", v.fecha, "fecha"));
+      if (v.notas) tarjeta.appendChild(elemento("p", v.notas));
+      var cambios = apartado("Qué trae de nuevo", v.cambios);
+      if (cambios) tarjeta.appendChild(cambios);
+      var arreglos = apartado("Qué se arregló", v.correcciones);
+      if (arreglos) tarjeta.appendChild(arreglos);
+      if (v.url) {
+        var p = elemento("p", null, "apartado");
+        var a = elemento("a", "Descargar esta versión");
+        a.href = v.url;
+        p.appendChild(a);
+        tarjeta.appendChild(p);
+      }
+      lista.appendChild(tarjeta);
+    });
+  })
+  .catch(function () {
+    document.getElementById("cargando").textContent =
+      "No se pudo leer el historial. Recargue la página.";
+  });
+</script>
+
+</body>
+</html>
