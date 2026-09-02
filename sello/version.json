@@ -1,14 +1,20 @@
 {
-  "versionCode": 3,
-  "versionName": "1.2",
+  "versionCode": 4,
+  "versionName": "1.3",
   "fecha": "2 de septiembre de 2026",
   "pesoMb": 36,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.2-3/sello-digital-1.2-3-arm64-v8a.apk",
-  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.2-3/sello-digital-1.2-3-universal.apk",
-  "notas": "Ahora se puede restaurar: en un teléfono nuevo, la app baja los oficios respaldados en Drive y les pide los datos al servidor.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.3-4/sello-digital-1.3-4-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.3-4/sello-digital-1.3-4-universal.apk",
+  "notas": "Pulido: las pantallas se mueven con más suavidad y se arreglaron tres letreros que casi no se leían.",
   "cambios": [
-    "Botón «Restaurar desde Drive» en Ajustes → Respaldo. Busca los oficios respaldados, se trae los que no estén en el teléfono y les pide los datos al servidor, igual que cuando se validaron. Los PDF y los acuses se bajan a su lugar.",
-    "La restauración no borra ni cambia nada de lo que ya está en el teléfono: solo agrega lo que falta. Los oficios que ya estaban y sí tienen copia en Drive quedan marcados como respaldados."
+    "Los pasos de validar se cruzan con un fundido en vez de brincar, y la palomita de «oficio validado» entra creciendo.",
+    "En el historial, la lista se desliza al cambiar de pestaña y los oficios se acomodan solos cuando uno pasa a entregado.",
+    "Mientras el historial y las lecturas del QR se cargan, ahora se ve una rueda de espera en vez de una pantalla en blanco."
   ],
-  "correcciones": []
+  "correcciones": [
+    "La letra blanca sobre el verde brillante casi no se leía (2.7 de contraste, cuando lo mínimo es 4.5). Ahora esas franjas llevan letra verde oscura.",
+    "El renglón «validado el … pendiente N días» del historial estaba escrito en ámbar sobre fondo claro y se perdía. Ahora usa un tono que sí se lee, y en tema oscuro se queda con el color vivo.",
+    "La pantalla verde de «oficio validado» y el aviso del detalle usaban un verde demasiado claro para llevar letra blanca; pasaron al verde oscuro de la paleta.",
+    "Los avisos importantes (el rojo de validar y el veredicto de la inteligencia artificial) ahora se leen solos con el lector de pantalla en cuanto aparecen."
+  ]
 }
