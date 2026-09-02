@@ -1,13 +1,14 @@
 {
-  "versionCode": 2,
-  "versionName": "1.1",
+  "versionCode": 3,
+  "versionName": "1.2",
   "fecha": "2 de septiembre de 2026",
-  "pesoMb": 35,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.1-2/sello-digital-1.1-2-arm64-v8a.apk",
-  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.1-2/sello-digital-1.1-2-universal.apk",
-  "notas": "El respaldo en Google Drive ya se puede encender: antes decía que la cuenta estaba conectada pero dejaba apagados el interruptor y el botón de respaldar.",
-  "cambios": [],
-  "correcciones": [
-    "Al conectar la cuenta de Google, la app daba el permiso por bueno pero seguía tratándola como si no hubiera cuenta: el interruptor de «Subir los PDF solos» y el botón de «Respaldar todo» se quedaban apagados. Pasaba cuando Google entrega el permiso sin el correo de la cuenta."
-  ]
+  "pesoMb": 36,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.2-3/sello-digital-1.2-3-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.2-3/sello-digital-1.2-3-universal.apk",
+  "notas": "Ahora se puede restaurar: en un teléfono nuevo, la app baja los oficios respaldados en Drive y les pide los datos al servidor.",
+  "cambios": [
+    "Botón «Restaurar desde Drive» en Ajustes → Respaldo. Busca los oficios respaldados, se trae los que no estén en el teléfono y les pide los datos al servidor, igual que cuando se validaron. Los PDF y los acuses se bajan a su lugar.",
+    "La restauración no borra ni cambia nada de lo que ya está en el teléfono: solo agrega lo que falta. Los oficios que ya estaban y sí tienen copia en Drive quedan marcados como respaldados."
+  ],
+  "correcciones": []
 }

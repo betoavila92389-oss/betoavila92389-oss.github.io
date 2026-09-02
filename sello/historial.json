@@ -1,5 +1,19 @@
 [
   {
+    "versionCode": 3,
+    "versionName": "1.2",
+    "fecha": "2 de septiembre de 2026",
+    "pesoMb": 36,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.2-3/sello-digital-1.2-3-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.2-3/sello-digital-1.2-3-universal.apk",
+    "notas": "Ahora se puede restaurar: en un teléfono nuevo, la app baja los oficios respaldados en Drive y les pide los datos al servidor.",
+    "cambios": [
+      "Botón «Restaurar desde Drive» en Ajustes → Respaldo. Busca los oficios respaldados, se trae los que no estén en el teléfono y les pide los datos al servidor, igual que cuando se validaron. Los PDF y los acuses se bajan a su lugar.",
+      "La restauración no borra ni cambia nada de lo que ya está en el teléfono: solo agrega lo que falta. Los oficios que ya estaban y sí tienen copia en Drive quedan marcados como respaldados."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 2,
     "versionName": "1.1",
     "fecha": "2 de septiembre de 2026",
