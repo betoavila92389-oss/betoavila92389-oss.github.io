@@ -1,20 +1,18 @@
 {
-  "versionCode": 4,
-  "versionName": "1.3",
+  "versionCode": 5,
+  "versionName": "1.4",
   "fecha": "2 de septiembre de 2026",
   "pesoMb": 36,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.3-4/sello-digital-1.3-4-arm64-v8a.apk",
-  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.3-4/sello-digital-1.3-4-universal.apk",
-  "notas": "Pulido: las pantallas se mueven con más suavidad y se arreglaron tres letreros que casi no se leían.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.4-5/sello-digital-1.4-5-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.4-5/sello-digital-1.4-5-universal.apk",
+  "notas": "Ya se puede cambiar de cuenta de Google Drive: antes, al quitar una y conectar otra, se quedaba en «Conectando…» y no cambiaba nada.",
   "cambios": [
-    "Los pasos de validar se cruzan con un fundido en vez de brincar, y la palomita de «oficio validado» entra creciendo.",
-    "En el historial, la lista se desliza al cambiar de pestaña y los oficios se acomodan solos cuando uno pasa a entregado.",
-    "Mientras el historial y las lecturas del QR se cargan, ahora se ve una rueda de espera en vez de una pantalla en blanco."
+    "«Quitar la cuenta» ahora le suelta el permiso a Google, no nada más lo olvida en el teléfono. Por eso la próxima vez que conecte, Google le vuelve a preguntar cuál cuenta quiere usar.",
+    "El botón enseña «Quitando la cuenta…» mientras lo hace."
   ],
   "correcciones": [
-    "La letra blanca sobre el verde brillante casi no se leía (2.7 de contraste, cuando lo mínimo es 4.5). Ahora esas franjas llevan letra verde oscura.",
-    "El renglón «validado el … pendiente N días» del historial estaba escrito en ámbar sobre fondo claro y se perdía. Ahora usa un tono que sí se lee, y en tema oscuro se queda con el color vivo.",
-    "La pantalla verde de «oficio validado» y el aviso del detalle usaban un verde demasiado claro para llevar letra blanca; pasaron al verde oscuro de la paleta.",
-    "Los avisos importantes (el rojo de validar y el veredicto de la inteligencia artificial) ahora se leen solos con el lector de pantalla en cuanto aparecen."
+    "Al quitar una cuenta de Drive y querer conectar otra, la pantalla se quedaba en «Conectando…» sin conectar nada. Eran dos cosas: el permiso seguía dado del lado de Google, así que devolvía siempre la misma cuenta sin preguntar; y si Google no contestaba, la app se quedaba esperando para siempre.",
+    "Ahora la app nunca se queda colgada esperando a Google: a los 45 segundos avisa y deja volver a intentar.",
+    "Si la pantalla de Google no se puede abrir, ahora lo dice en vez de quedarse callada."
   ]
 }
