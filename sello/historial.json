@@ -1,5 +1,18 @@
 [
   {
+    "versionCode": 6,
+    "versionName": "1.5",
+    "fecha": "2 de septiembre de 2026",
+    "pesoMb": 36,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.5-6/sello-digital-1.5-6-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.5-6/sello-digital-1.5-6-universal.apk",
+    "notas": "Al cambiar de cuenta de Drive, los oficios vuelven a quedar pendientes de respaldo para que se suban completos a la cuenta nueva.",
+    "cambios": [],
+    "correcciones": [
+      "Al quitar la cuenta de Google Drive, los oficios seguían marcados como respaldados aunque la cuenta nueva no tuviera nada. Quedaban dando por buena una copia que ya no existía y «Respaldar todo» decía que no había nada que subir. Ahora, al quitar la cuenta, todos vuelven a contar como pendientes."
+    ]
+  },
+  {
     "versionCode": 5,
     "versionName": "1.4",
     "fecha": "2 de septiembre de 2026",
