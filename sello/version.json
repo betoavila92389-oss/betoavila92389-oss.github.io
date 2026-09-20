@@ -1,18 +1,15 @@
 {
-  "versionCode": 7,
-  "versionName": "1.6",
-  "fecha": "7 de septiembre de 2026",
+  "versionCode": 8,
+  "versionName": "1.7",
+  "fecha": "20 de septiembre de 2026",
   "pesoMb": 36,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.6-7/sello-digital-1.6-7-arm64-v8a.apk",
-  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.6-7/sello-digital-1.6-7-universal.apk",
-  "notas": "La app ya distingue los oficios de las constancias de alumno. En la página pública el nombre del alumno sale recortado; en la app usted lo ve completo.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.7-8/sello-digital-1.7-8-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.7-8/sello-digital-1.7-8-universal.apk",
+  "notas": "Ahora puede quitar del historial un documento que al final decidió no entregar.",
   "cambios": [
-    "En el Historial, deslice la lista hacia abajo para actualizar: publica en el servidor lo que faltaba, sube a Drive los oficios sin respaldo y recupera del respaldo los que ya no estén en el teléfono.",
-    "Historial: botones para ver Todo, solo Oficios o solo Constancias, y cada renglón dice de cuál se trata.",
-    "Al cotejar una constancia los rótulos cambian a Matrícula, Tipo de documento, Alumno y Grado y ciclo.",
-    "En las constancias no se usa la revisión con inteligencia artificial: el nombre de un menor no sale del teléfono."
+    "En el detalle de un oficio o una constancia, hasta abajo, hay un botón rojo: Quitar del historial. Pide confirmación antes de borrar.",
+    "Al quitarlo se borran del teléfono sus datos y su PDF firmado. La página de verificación en internet no cambia: ahí sigue apareciendo como validado, porque así se firmó el papel.",
+    "El documento que usted quitó ya no regresa solo al jalar el historial hacia abajo, aunque siga respaldado en Google Drive."
   ],
-  "correcciones": [
-    "La página de verificación mostraba el nombre completo del alumno de una constancia a cualquiera que abriera el QR. Ahora solo muestra el primer nombre y las iniciales (ELENA CH. A.); el nombre completo únicamente lo ve la app de la dirección."
-  ]
+  "correcciones": []
 }

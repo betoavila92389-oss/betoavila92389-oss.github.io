@@ -1,5 +1,20 @@
 [
   {
+    "versionCode": 8,
+    "versionName": "1.7",
+    "fecha": "20 de septiembre de 2026",
+    "pesoMb": 36,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.7-8/sello-digital-1.7-8-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/sello-v1.7-8/sello-digital-1.7-8-universal.apk",
+    "notas": "Ahora puede quitar del historial un documento que al final decidió no entregar.",
+    "cambios": [
+      "En el detalle de un oficio o una constancia, hasta abajo, hay un botón rojo: Quitar del historial. Pide confirmación antes de borrar.",
+      "Al quitarlo se borran del teléfono sus datos y su PDF firmado. La página de verificación en internet no cambia: ahí sigue apareciendo como validado, porque así se firmó el papel.",
+      "El documento que usted quitó ya no regresa solo al jalar el historial hacia abajo, aunque siga respaldado en Google Drive."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 7,
     "versionName": "1.6",
     "fecha": "7 de septiembre de 2026",
