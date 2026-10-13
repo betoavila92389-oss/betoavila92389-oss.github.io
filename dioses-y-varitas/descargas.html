@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Dioses y Varitas</title>
+<meta name="description" content="Última versión de la app de Dioses y Varitas para Android.">
+<link rel="icon" href="emblema.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=EB+Garamond:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+  <div class="caja">
+    <h1>Descargar la app</h1>
+    <div class="lema">DIOSES Y VARITAS</div>
+    <nav><a href="index.html">Inicio</a><a href="historial.html">Historial de versiones</a></nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="tarjeta destacada">
+    <h2>Última versión</h2>
+    <p id="version" style="font-size:1.25rem;margin:8px 0"><strong>—</strong></p>
+    <p id="fecha" class="fecha" style="margin:0 0 4px"></p>
+    <p id="notas" style="margin:12px 0"></p>
+    <p style="margin-top:20px">
+      <a id="descargar" class="boton" href="#">Descargar la app</a>
+    </p>
+    <p id="peso" class="fecha"></p>
+    <p style="margin:16px 0 0">
+      <a id="universal" class="boton tenue" href="#">Descargar la versión universal</a>
+    </p>
+  </div>
+
+  <div class="aviso cuidado" id="aviso-pruebas">
+    <strong>Todavía en construcción.</strong> Las versiones 0.x son de prueba:
+    la app aún no tiene todas sus secciones. Cada versión nueva se instala
+    encima de la anterior sin perder nada.
+  </div>
+
+  <h2>Cómo se instala</h2>
+  <ol>
+    <li>Abre esta página <strong>desde el celular</strong> y toca «Descargar la app».</li>
+    <li>Ábrela desde la notificación de descarga o desde «Mis archivos».</li>
+    <li>Si Android avisa que no puede instalar apps desconocidas, permítelo
+        para el navegador. Es normal: la app no viene de la Play Store.</li>
+    <li>En el celular de una niña o un niño con <strong>Family Link</strong>,
+        la mamá, el papá o el tutor tiene que dar ese permiso desde su propia
+        app de Family Link.</li>
+    <li>Las versiones nuevas se instalan encima de la anterior y no se pierde
+        nada: todas van firmadas con la misma llave.</li>
+  </ol>
+
+  <p class="fecha">
+    ¿Cuál bajar? El botón dorado sirve en cualquier celular Android de 2018 en
+    adelante. La versión universal solo hace falta si la otra no se instala.
+  </p>
+
+  <div class="aviso">
+    <strong>La app avisa sola.</strong> Cuando se publique una versión nueva,
+    la app lo dice al abrirla y trae un botón para descargarla.
+  </div>
+
+</main>
+
+<footer>
+  <div class="caja">
+    <a href="index.html">Inicio</a>
+    <a href="historial.html">Historial de versiones</a>
+    <a href="privacidad.html">Aviso de privacidad</a>
+  </div>
+</footer>
+
+<script>
+// La misma información que consulta la app para saber si hay versión nueva.
+fetch("version.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (v) {
+    var titulo = document.getElementById("version");
+    titulo.textContent = "";
+    var fuerte = document.createElement("strong");
+    fuerte.textContent = v.versionName;
+    titulo.appendChild(fuerte);
+    titulo.appendChild(document.createTextNode(" (compilación " + v.versionCode + ")"));
+    document.getElementById("fecha").textContent = "Publicada el " + v.fecha + ".";
+    document.getElementById("notas").textContent = v.notas || "";
+    var enlace = document.getElementById("descargar");
+    enlace.href = v.url;
+    enlace.setAttribute("download", "");
+    var otro = document.getElementById("universal");
+    if (v.urlUniversal) {
+      otro.href = v.urlUniversal;
+      otro.setAttribute("download", "");
+    } else {
+      otro.parentNode.remove();
+    }
+    if (v.pesoMb) document.getElementById("peso").textContent = "Pesa " + v.pesoMb + " MB.";
+    if (!/^0\./.test(v.versionName)) document.getElementById("aviso-pruebas").remove();
+  })
+  .catch(function () {
+    document.getElementById("version").textContent =
+      "Todavía no hay ninguna versión publicada, o no se pudo leer. Recarga la página.";
+    document.getElementById("descargar").parentNode.remove();
+    document.getElementById("universal").parentNode.remove();
+  });
+</script>
+
+</body>
+</html>

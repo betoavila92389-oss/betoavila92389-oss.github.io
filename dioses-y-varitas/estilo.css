@@ -107,3 +107,34 @@ footer {
 }
 
 footer .caja { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+/* Páginas de descargas e historial */
+.tarjeta {
+  background: rgba(27, 40, 88, .85);
+  border: 1px solid var(--linea);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.tarjeta.destacada { border-left: 4px solid var(--oro); }
+.tarjeta h2 { margin-top: 0; border: 0; padding-bottom: 0; }
+.boton {
+  display: inline-block;
+  background: linear-gradient(var(--oro), var(--oro2));
+  color: #1A1A2E;
+  padding: 14px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  min-height: 48px;
+}
+.boton.tenue { background: transparent; color: var(--oro); border: 1px solid var(--linea); }
+.etiqueta {
+  display: inline-block; font-family: var(--titulo); font-size: .7rem; letter-spacing: .05em;
+  background: var(--oro); color: #1A1A2E; padding: 2px 10px; border-radius: 999px;
+  margin-left: 10px; vertical-align: middle;
+}
+.apartado { margin-top: 14px; }
+.apartado h3 { margin: 0 0 6px; font-size: .9rem; color: var(--tenue); }
+.apartado ul { margin: 0; }
+.cuidado { border-left-color: #FF9C8F; }
