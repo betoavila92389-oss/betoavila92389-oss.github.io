@@ -7,6 +7,7 @@ Android de uso interno de la dirección del plantel (Meoqui, Chihuahua).
 |---|---|
 | **Gestor Escolar** | `/` · [descargas](descargas.html) · [historial](historial.html) · [privacidad](privacidad.html) |
 | **Sello Digital 2571** | [`/sello/`](sello/) · [descargas](sello/descargas.html) · [historial](sello/historial.html) · [privacidad](sello/privacidad.html) |
+| **Dioses y Varitas** (juego de cartas, no es de la escuela) | [`/dioses-y-varitas/`](dioses-y-varitas/) · [privacidad](dioses-y-varitas/privacidad.html) · [condiciones](dioses-y-varitas/terminos.html) — se publican con `sitio/publicar.sh` desde el repositorio privado `dioses-y-varitas` |
 
 Existen porque Google Cloud las exige para publicar el consentimiento de OAuth: las apps
 respaldan en Google Drive con el permiso `drive.file` y, sin una página principal y una
