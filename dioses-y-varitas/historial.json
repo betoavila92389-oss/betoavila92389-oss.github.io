@@ -1,5 +1,24 @@
 [
   {
+    "versionCode": 3,
+    "versionName": "0.3",
+    "fecha": "13 de octubre de 2026",
+    "pesoMb": 159,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.3-3/dioses-y-varitas-0.3-3-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.3-3/dioses-y-varitas-0.3-3-universal.apk",
+    "notas": "Ya puedes registrar tus cartas, verlas en tu álbum, armar tus mazos y elegir tus reglas de la casa. Todo se guarda en tu cuenta.",
+    "cambios": [
+      "Menú con seis secciones: Inicio, Duelo, Álbum, Mazos, Escanear y Ajustes.",
+      "Escanear: lee el código QR de la carta de registro de un sobre (registra las 8 cartas de un toque) o de una carta suelta. Si no hay internet, se registra solo cuando vuelve.",
+      "Álbum: solo tus cartas registradas, con buscador, filtros y el detalle de cada copia impresa.",
+      "Mazos: arma, guarda y borra tus mazos con tus cartas, con «Autocompletar 20-12-8» y las reglas del instructivo revisadas mientras armas.",
+      "Ajustes: respaldo en tu cuenta, reglas de la casa, tiempo para «¿Respondes?», sonido y vibración.",
+      "Reglas: el instructivo completo dentro de la app, con buscador.",
+      "Inicio: tus cartas, sobres y mazos, y la hora del último respaldo."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 1,
     "versionName": "0.1",
     "fecha": "12 de octubre de 2026",
