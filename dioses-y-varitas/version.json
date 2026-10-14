@@ -1,21 +1,24 @@
 {
-  "versionCode": 10,
-  "versionName": "0.10",
-  "fecha": "13 de octubre de 2026",
-  "pesoMb": 220,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.10-10/dioses-y-varitas-0.10-10-arm64-v8a.apk",
-  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.10-10/dioses-y-varitas-0.10-10-universal.apk",
-  "notas": "Campañas, duelos de 3 y 4 jugadores, cartas nuevas, animaciones, sonidos y repeticiones.",
+  "versionCode": 11,
+  "versionName": "0.11",
+  "fecha": "14 de octubre de 2026",
+  "pesoMb": 222,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.11-11/dioses-y-varitas-0.11-11-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.11-11/dioses-y-varitas-0.11-11-universal.apk",
+  "notas": "Batallas en grande, Mágicas y Trampas que se ven al activarse, Cementerios con sus cartas, y arreglos.",
   "cambios": [
-    "Campañas «Años en Hogwarts» y «Camino al Ragnarök», con 7 rivales cada una.",
-    "Duelos de 3 y 4 jugadores: Batalla Real y Equipo 2 contra 2, contra la computadora o en varios celulares.",
-    "Cartas con el diseño nuevo y 196 cartas más. Toca una carta para verla en pantalla completa o ver su ilustración.",
-    "Animaciones, sonidos y vibración en el duelo (se apagan en Ajustes).",
-    "Repeticiones de tus últimos duelos.",
-    "El botón «Actualizar» baja la versión nueva solo."
+    "En cada batalla, las dos cartas chocan en grande, la ganadora lleva el letrero «¡GANA!» y se ve quién ganó (y la cuenta, si está encendida en Ajustes).",
+    "Cuando alguien activa una Mágica o una Trampa, la carta se voltea en grande y abajo dice qué hace. Cuando un monstruo usa su efecto, también sale en grande.",
+    "Los Cementerios (el tuyo y el del rival) se ven con sus cartas: toca una para ver qué hace.",
+    "Cuando una carta te deja mirar la mano del rival, ves sus cartas y qué hace cada una. Si tienes que elegir una de su mano, también.",
+    "La bitácora dice qué carta se activó, qué hace y, debajo, lo que pasó por su efecto («→ Hada es destruida», «→ Pierdes 500 PV»). Cada batalla dice quién contra quién y quién ganó.",
+    "La bitácora trae la miniatura de cada carta: tócala para verla en grande. Toca el texto de una carta para leerlo completo.",
+    "En los duelos dentro de la app (contra la computadora, campaña o en varios celulares sin cartas en la mesa), en el turno del rival se ve todo su tablero en grande. Con «Ver mi mesa» se esconde.",
+    "Si la app se llega a cerrar sola, la próxima vez que la abras te ofrece mandar un aviso para arreglarlo."
   ],
   "correcciones": [
-    "Ya no se pide la cuenta de Google a cada rato.",
-    "Si se cae la conexión de quien abrió la sala, otro celular sigue el duelo."
+    "Abrir Escanear ya no cierra la app.",
+    "Algunas cartas e ilustraciones todavía traían el diseño viejo.",
+    "La bitácora ya no dice «Tú activa» ni «Tú pierde»: ahora dice «Tú activas», «Pierdes»."
   ]
 }
