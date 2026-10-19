@@ -1,5 +1,28 @@
 [
   {
+    "versionCode": 13,
+    "versionName": "0.13",
+    "fecha": "19 de octubre de 2026",
+    "pesoMb": 287,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.13-13/dioses-y-varitas-0.13-13-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.13-13/dioses-y-varitas-0.13-13-universal.apk",
+    "notas": "Una revisión a fondo de toda la app: se corrigieron varios errores que podían trabar un duelo, perder un mazo o cerrar la app.",
+    "cambios": [
+      "En «¿Respondes?» ahora también puedes usar el efecto de un monstruo que anula o cambia el ataque (por ejemplo, HARRY POTTER anula una Maldición), como dice el instructivo.",
+      "Al armar un mazo ya no se pueden pasar de 60 cartas ni de 5 en el Mazo de Fusión, y se pueden guardar hasta 50 mazos."
+    ],
+    "correcciones": [
+      "Si un ataque voltea a un monstruo boca abajo, ya no se activa su «Al invocarlo» (como dice el instructivo).",
+      "Un monstruo que «debe atacar» ya no traba el duelo cuando otra carta prohíbe atacar.",
+      "Si a un jugador lo eliminan en plena Pila, el duelo ya no se queda esperando a que robe.",
+      "Una carta que se destruye a sí misma (EL SOL DEVORADO) ya no queda dos veces en el Cementerio, y las cartas que pasan a la mano de otro jugador ya no se duplican ni desaparecen.",
+      "Si guardas o borras un mazo mientras se respalda otro, ya no se pierde el cambio.",
+      "La bitácora ya no dice el nombre de las cartas ocultas del rival que regresan a su mazo, y dice de dónde llega cada monstruo al campo.",
+      "Cambiar el tamaño de la letra del celular a media partida ya no reinicia el duelo.",
+      "Un mensaje roto de otro celular ya no cierra la app, y por Wi-Fi ya no se pierden mensajes cuando la red va lenta."
+    ]
+  },
+  {
     "versionCode": 12,
     "versionName": "0.12",
     "fecha": "18 de octubre de 2026",
