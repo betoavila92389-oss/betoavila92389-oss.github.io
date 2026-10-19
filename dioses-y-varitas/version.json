@@ -1,24 +1,16 @@
 {
-  "versionCode": 11,
-  "versionName": "0.11",
-  "fecha": "14 de octubre de 2026",
-  "pesoMb": 222,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.11-11/dioses-y-varitas-0.11-11-arm64-v8a.apk",
-  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.11-11/dioses-y-varitas-0.11-11-universal.apk",
-  "notas": "Batallas en grande, Mágicas y Trampas que se ven al activarse, Cementerios con sus cartas, y arreglos.",
+  "versionCode": 12,
+  "versionName": "0.12",
+  "fecha": "18 de octubre de 2026",
+  "pesoMb": 287,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.12-12/dioses-y-varitas-0.12-12-arm64-v8a.apk",
+  "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.12-12/dioses-y-varitas-0.12-12-universal.apk",
+  "notas": "¡Ya están las 1500 cartas con su ilustración! Y al armar tu mazo puedes ver cada carta en grande.",
   "cambios": [
-    "En cada batalla, las dos cartas chocan en grande, la ganadora lleva el letrero «¡GANA!» y se ve quién ganó (y la cuenta, si está encendida en Ajustes).",
-    "Cuando alguien activa una Mágica o una Trampa, la carta se voltea en grande y abajo dice qué hace. Cuando un monstruo usa su efecto, también sale en grande.",
-    "Los Cementerios (el tuyo y el del rival) se ven con sus cartas: toca una para ver qué hace.",
-    "Cuando una carta te deja mirar la mano del rival, ves sus cartas y qué hace cada una. Si tienes que elegir una de su mano, también.",
-    "La bitácora dice qué carta se activó, qué hace y, debajo, lo que pasó por su efecto («→ Hada es destruida», «→ Pierdes 500 PV»). Cada batalla dice quién contra quién y quién ganó.",
-    "La bitácora trae la miniatura de cada carta: tócala para verla en grande. Toca el texto de una carta para leerlo completo.",
-    "En los duelos dentro de la app (contra la computadora, campaña o en varios celulares sin cartas en la mesa), en el turno del rival se ve todo su tablero en grande. Con «Ver mi mesa» se esconde.",
-    "Si la app se llega a cerrar sola, la próxima vez que la abras te ofrece mandar un aviso para arreglarlo."
+    "Las 1500 cartas ya tienen su ilustración, y varias ilustraciones se renovaron.",
+    "Al armar tu mazo, cada carta sale en chiquito. Tócala para verla en grande: la carta o su ilustración, qué hace, cuántas llevas, y agrégala o quítala desde ahí."
   ],
   "correcciones": [
-    "Abrir Escanear ya no cierra la app.",
-    "Algunas cartas e ilustraciones todavía traían el diseño viejo.",
-    "La bitácora ya no dice «Tú activa» ni «Tú pierde»: ahora dice «Tú activas», «Pierdes»."
+    "Contestar «¿Respondes?» cuando la computadora atacaba a un monstruo ya no cierra la app."
   ]
 }
