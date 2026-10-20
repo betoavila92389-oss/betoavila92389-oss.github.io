@@ -32,9 +32,6 @@
       <a id="descargar" class="boton" href="#">Descargar la app</a>
     </p>
     <p id="peso" class="fecha"></p>
-    <p style="margin:16px 0 0">
-      <a id="universal" class="boton tenue" href="#">Descargar la versión universal</a>
-    </p>
   </div>
 
   <div class="aviso cuidado" id="aviso-pruebas">
@@ -57,8 +54,7 @@
   </ol>
 
   <p class="fecha">
-    ¿Cuál bajar? El botón dorado sirve en cualquier celular Android de 2018 en
-    adelante. La versión universal solo hace falta si la otra no se instala.
+    La app sirve en cualquier celular Android de 2018 en adelante.
   </p>
 
   <div class="aviso">
@@ -92,13 +88,6 @@ fetch("version.json?" + Date.now())
     var enlace = document.getElementById("descargar");
     enlace.href = v.url;
     enlace.setAttribute("download", "");
-    var otro = document.getElementById("universal");
-    if (v.urlUniversal) {
-      otro.href = v.urlUniversal;
-      otro.setAttribute("download", "");
-    } else {
-      otro.parentNode.remove();
-    }
     if (v.pesoMb) document.getElementById("peso").textContent = "Pesa " + v.pesoMb + " MB.";
     if (!/^0\./.test(v.versionName)) document.getElementById("aviso-pruebas").remove();
   })
@@ -106,7 +95,6 @@ fetch("version.json?" + Date.now())
     document.getElementById("version").textContent =
       "Todavía no hay ninguna versión publicada, o no se pudo leer. Recarga la página.";
     document.getElementById("descargar").parentNode.remove();
-    document.getElementById("universal").parentNode.remove();
   });
 </script>
 
