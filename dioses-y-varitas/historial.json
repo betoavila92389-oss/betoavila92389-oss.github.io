@@ -19,7 +19,6 @@
     "versionName": "0.14",
     "fecha": "19 de octubre de 2026",
     "pesoMb": 287,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.14-14/dioses-y-varitas-0.14-14-arm64-v8a.apk",
     "notas": "Jugamos miles de partidas buscando cartas que se pudieran usar sin fin. Siete cartas cambian su texto para que los duelos sean más parejos.",
     "cambios": [
       "OMNICULARES ya no puede recuperar otra OMNICULARES (dos de ellas se regresaban una a la otra para siempre).",
@@ -36,7 +35,6 @@
     "versionName": "0.13",
     "fecha": "19 de octubre de 2026",
     "pesoMb": 287,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.13-13/dioses-y-varitas-0.13-13-arm64-v8a.apk",
     "notas": "Una revisión a fondo de toda la app: se corrigieron varios errores que podían trabar un duelo, perder un mazo o cerrar la app.",
     "cambios": [
       "En «¿Respondes?» ahora también puedes usar el efecto de un monstruo que anula o cambia el ataque (por ejemplo, HARRY POTTER anula una Maldición), como dice el instructivo.",
@@ -58,7 +56,6 @@
     "versionName": "0.12",
     "fecha": "18 de octubre de 2026",
     "pesoMb": 287,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.12-12/dioses-y-varitas-0.12-12-arm64-v8a.apk",
     "notas": "¡Ya están las 1500 cartas con su ilustración! Y al armar tu mazo puedes ver cada carta en grande.",
     "cambios": [
       "Las 1500 cartas ya tienen su ilustración, y varias ilustraciones se renovaron.",
@@ -73,7 +70,6 @@
     "versionName": "0.11",
     "fecha": "14 de octubre de 2026",
     "pesoMb": 222,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.11-11/dioses-y-varitas-0.11-11-arm64-v8a.apk",
     "notas": "Batallas en grande, Mágicas y Trampas que se ven al activarse, Cementerios con sus cartas, y arreglos.",
     "cambios": [
       "En cada batalla, las dos cartas chocan en grande, la ganadora lleva el letrero «¡GANA!» y se ve quién ganó (y la cuenta, si está encendida en Ajustes).",
@@ -96,7 +92,6 @@
     "versionName": "0.10",
     "fecha": "13 de octubre de 2026",
     "pesoMb": 220,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.10-10/dioses-y-varitas-0.10-10-arm64-v8a.apk",
     "notas": "Campañas, duelos de 3 y 4 jugadores, cartas nuevas, animaciones, sonidos y repeticiones.",
     "cambios": [
       "Campañas «Años en Hogwarts» y «Camino al Ragnarök», con 7 rivales cada una.",
@@ -116,7 +111,6 @@
     "versionName": "0.7",
     "fecha": "13 de octubre de 2026",
     "pesoMb": 161,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.7-7/dioses-y-varitas-0.7-7-arm64-v8a.apk",
     "notas": "Arreglo en el duelo: ya puedes invocar monstruos aunque su efecto no encuentre carta.",
     "cambios": [],
     "correcciones": [
@@ -128,7 +122,6 @@
     "versionName": "0.6",
     "fecha": "13 de octubre de 2026",
     "pesoMb": 161,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.6-6/dioses-y-varitas-0.6-6-arm64-v8a.apk",
     "notas": "Arreglo en el duelo: ya puedes invocar monstruos aunque su efecto no encuentre carta.",
     "cambios": [],
     "correcciones": [
@@ -140,7 +133,6 @@
     "versionName": "0.5",
     "fecha": "13 de octubre de 2026",
     "pesoMb": 161,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.5-5/dioses-y-varitas-0.5-5-arm64-v8a.apk",
     "notas": "¡Ya puedes duelar contra otro celular! Sin internet, con los dos celulares cerca.",
     "cambios": [
       "Duelo ▸ «Contra otro celular»: uno abre la sala y el otro se une.",
@@ -156,7 +148,6 @@
     "versionName": "0.4",
     "fecha": "13 de octubre de 2026",
     "pesoMb": 159,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.4-4/dioses-y-varitas-0.4-4-arm64-v8a.apk",
     "notas": "¡Ya puedes jugar duelos contra la computadora! Con tus cartas impresas en la mesa o en digital.",
     "cambios": [
       "Duelo: elige «En la mesa» (escaneas las cartas que robas) o «Digital» (la app baraja y reparte), el modo y tu mazo.",
@@ -174,7 +165,6 @@
     "versionName": "0.3",
     "fecha": "13 de octubre de 2026",
     "pesoMb": 159,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.3-3/dioses-y-varitas-0.3-3-arm64-v8a.apk",
     "notas": "Ya puedes registrar tus cartas, verlas en tu álbum, armar tus mazos y elegir tus reglas de la casa. Todo se guarda en tu cuenta.",
     "cambios": [
       "Menú con seis secciones: Inicio, Duelo, Álbum, Mazos, Escanear y Ajustes.",
@@ -192,7 +182,6 @@
     "versionName": "0.1",
     "fecha": "12 de octubre de 2026",
     "pesoMb": 11,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.1-1/dioses-y-varitas-0.1-1-arm64-v8a.apk",
     "notas": "Primera versión de prueba: ya puedes entrar con tu cuenta de Google.",
     "cambios": [
       "Pantalla «Continuar con Google». No hay modo invitado: la cuenta es la llave de tus cartas.",
