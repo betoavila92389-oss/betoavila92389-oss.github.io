@@ -1,5 +1,23 @@
 [
   {
+    "versionCode": 14,
+    "versionName": "0.14",
+    "fecha": "19 de octubre de 2026",
+    "pesoMb": 287,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.14-14/dioses-y-varitas-0.14-14-arm64-v8a.apk",
+    "urlUniversal": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/dyv-v0.14-14/dioses-y-varitas-0.14-14-universal.apk",
+    "notas": "Jugamos miles de partidas buscando cartas que se pudieran usar sin fin. Siete cartas cambian su texto para que los duelos sean más parejos.",
+    "cambios": [
+      "OMNICULARES ya no puede recuperar otra OMNICULARES (dos de ellas se regresaban una a la otra para siempre).",
+      "LOKI, GILDEROY LOCKHART, BARTY CROUCH JR. y LA POCIÓN MULTIJUGOS ya no pueden copiar a otra carta que copie efectos.",
+      "PRISIONERO DE LA DEUDA DE HONOR y CHAMÁN DE LA TRIBU BÁRBARA siguen creciendo cada turno, pero hasta un máximo de +2400 PM.",
+      "El texto de esas siete cartas ya dice su regla nueva. Si tienes una impresa antes, la app usa la regla nueva."
+    ],
+    "correcciones": [
+      "FAWKES ya renace al final del turno, como dice su carta, y no al instante."
+    ]
+  },
+  {
     "versionCode": 13,
     "versionName": "0.13",
     "fecha": "19 de octubre de 2026",
