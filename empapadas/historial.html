@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icono.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Fira+Sans+Condensed:wght@800&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<title>Historial de versiones · Empapadas POS</title>
+<meta name="description" content="Qué trae cada versión de Empapadas POS para Android.">
+</head>
+<body>
+
+<header>
+  <div class="caja">
+    <h1>Historial de versiones</h1>
+    <div class="lema">EMPAPADAS POS</div>
+    <nav><a href="index.html">Inicio</a><a href="descargas.html">Descargar la app</a></nav>
+  </div>
+</header>
+
+<main>
+  <p id="cargando">Cargando el historial…</p>
+  <div id="lista"></div>
+
+  <div class="aviso">
+    Cada versión se instala encima de la anterior sin perder nada.
+  </div>
+</main>
+
+<footer>
+  <div class="caja">
+    <a href="index.html">Inicio</a>
+    <a href="descargas.html">Descargar la app</a>
+    <a href="privacidad.html">Aviso de privacidad</a>
+  </div>
+</footer>
+
+<script>
+function elemento(etiqueta, texto, clase) {
+  var e = document.createElement(etiqueta);
+  if (texto) e.textContent = texto;
+  if (clase) e.className = clase;
+  return e;
+}
+
+function apartado(titulo, renglones) {
+  if (!renglones || !renglones.length) return null;
+  var caja = elemento("div", null, "apartado");
+  caja.appendChild(elemento("h3", titulo));
+  var lista = document.createElement("ul");
+  renglones.forEach(function (r) { lista.appendChild(elemento("li", r)); });
+  caja.appendChild(lista);
+  return caja;
+}
+
+fetch("historial.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (versiones) {
+    document.getElementById("cargando").remove();
+    var lista = document.getElementById("lista");
+    versiones.forEach(function (v, i) {
+      var tarjeta = elemento("div", null, "tarjeta" + (i === 0 ? " destacada" : ""));
+      var titulo = document.createElement("h2");
+      titulo.appendChild(document.createTextNode("Versión " + v.versionName + " (" + v.versionCode + ")"));
+      if (i === 0) titulo.appendChild(elemento("span", "la más reciente", "etiqueta"));
+      tarjeta.appendChild(titulo);
+      tarjeta.appendChild(elemento("p", v.fecha, "fecha"));
+      if (v.notas) tarjeta.appendChild(elemento("p", v.notas));
+      var cambios = apartado("Qué trae de nuevo", v.cambios);
+      if (cambios) tarjeta.appendChild(cambios);
+      var arreglos = apartado("Qué se arregló", v.correcciones);
+      if (arreglos) tarjeta.appendChild(arreglos);
+      if (v.url) {
+        var p = elemento("p", null, "apartado");
+        var a = elemento("a", "Descargar esta versión");
+        a.href = v.url;
+        p.appendChild(a);
+        tarjeta.appendChild(p);
+      }
+      lista.appendChild(tarjeta);
+    });
+  })
+  .catch(function () {
+    document.getElementById("cargando").textContent =
+      "Todavía no hay versiones publicadas, o no se pudo leer el historial. Recarga la página.";
+  });
+</script>
+
+</body>
+</html>

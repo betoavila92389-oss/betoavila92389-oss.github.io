@@ -1,0 +1,136 @@
+/* Los colores del camión: negro, amarillo y rojo, sobre crema (los mismos de la app). */
+:root {
+  --negro: #151313;
+  --carbon: #2A2522;
+  --amarillo: #FFC72C;
+  --amarillo2: #E5A800;
+  --rojo: #D7261E;
+  --rojo2: #A81B15;
+  --crema: #FFF8E6;
+  --crema2: #FCEFCB;
+  --borde: #E9DDBF;
+  --tinta: #231F1C;
+  --tenue: #6E6253;
+  --titulo: "Fira Sans Condensed", "Arial Narrow", sans-serif;
+  --texto: "Fira Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+header {
+  padding: 40px 16px 28px;
+  text-align: center;
+  background: var(--negro);
+  border-bottom: 6px solid var(--amarillo);
+}
+
+header .caja, main, footer .caja { max-width: 760px; margin: 0 auto; }
+
+header img { width: 110px; height: 110px; }
+
+header h1 {
+  font-family: var(--titulo);
+  font-weight: 800;
+  color: var(--amarillo);
+  letter-spacing: .02em;
+  margin: 10px 0 2px;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.1;
+}
+
+header .lema { font-weight: 700; font-size: .8rem; letter-spacing: .3em; color: var(--rojo); }
+
+header p { margin: 12px 0 0; color: #F2E6CF; }
+
+nav { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
+nav a { color: var(--amarillo); }
+
+main { padding: 28px 16px 56px; }
+
+h2 {
+  font-family: var(--titulo);
+  color: var(--rojo2);
+  margin-top: 36px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--borde);
+  padding-bottom: 6px;
+}
+
+h3 { font-size: 1rem; margin-top: 22px; }
+
+a { color: var(--rojo2); }
+
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+.fecha { color: var(--tenue); font-size: .95rem; }
+
+.aviso {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-left: 5px solid var(--amarillo);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 22px 0;
+}
+.cuidado { border-left-color: var(--rojo); }
+
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 1rem; }
+th, td { text-align: left; vertical-align: top; padding: 9px 8px; border-bottom: 1px solid var(--borde); }
+th { font-family: var(--titulo); color: var(--rojo2); }
+
+@media (max-width: 560px) {
+  table, thead, tbody, tr, th, td { display: block; }
+  thead { display: none; }
+  tr { border-bottom: 1px solid var(--borde); padding: 8px 0; }
+  td { border: 0; padding: 3px 0; }
+  td:first-child { font-weight: 700; color: var(--rojo2); }
+}
+
+footer {
+  background: var(--negro);
+  padding: 26px 16px 44px;
+  color: #B9AC95;
+  font-size: .95rem;
+}
+footer a { color: var(--amarillo); }
+footer .caja { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+/* Páginas de descargas e historial */
+.tarjeta {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 22px 0;
+}
+.tarjeta.destacada { border-left: 5px solid var(--rojo); }
+.tarjeta h2 { margin-top: 0; border: 0; padding-bottom: 0; }
+.boton {
+  display: inline-block;
+  background: var(--rojo);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  min-height: 48px;
+}
+.boton:hover { background: var(--rojo2); }
+.etiqueta {
+  display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .04em;
+  background: var(--amarillo); color: var(--negro); padding: 2px 10px; border-radius: 999px;
+  margin-left: 10px; vertical-align: middle;
+}
+.apartado { margin-top: 12px; }
+.apartado h3 { margin: 0 0 6px; font-size: .9rem; color: var(--tenue); }
+.apartado ul { margin: 0; }

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icono.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Fira+Sans+Condensed:wght@800&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<title>Descargar Empapadas POS</title>
+<meta name="description" content="Última versión de Empapadas POS para Android.">
+</head>
+<body>
+
+<header>
+  <div class="caja">
+    <h1>Descargar la app</h1>
+    <div class="lema">EMPAPADAS POS</div>
+    <nav><a href="index.html">Inicio</a><a href="historial.html">Historial de versiones</a></nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="tarjeta destacada">
+    <h2>Última versión</h2>
+    <p id="version" style="font-size:1.25rem;margin:8px 0"><strong>—</strong></p>
+    <p id="fecha" class="fecha" style="margin:0 0 4px"></p>
+    <p id="notas" style="margin:12px 0"></p>
+    <p style="margin-top:20px">
+      <a id="descargar" class="boton" href="#">Descargar la app</a>
+    </p>
+    <p id="peso" class="fecha"></p>
+  </div>
+
+  <h2>Cómo se instala</h2>
+  <ol>
+    <li>Abre esta página <strong>desde el celular</strong> y toca «Descargar la app».</li>
+    <li>Ábrela desde la notificación de descarga o desde «Mis archivos».</li>
+    <li>Si Android avisa que no puede instalar apps desconocidas, permítelo para el
+        navegador. Es normal: la app no viene de la Play Store.</li>
+    <li>Las versiones nuevas se instalan encima de la anterior y no se pierde nada:
+        todas van firmadas con la misma llave.</li>
+  </ol>
+
+  <h2>Pasar la información de la computadora</h2>
+  <ol>
+    <li>En la PC: <strong>Configuración &gt; Respaldos</strong> y copia el respaldo más
+        reciente (<code>respaldo-AAAA-MM-DD.db</code>) al celular, a Drive o por WhatsApp.</li>
+    <li>En el celular: <strong>Configuración &gt; Respaldos &gt; Cargar un respaldo</strong>
+        y elige ese archivo.</li>
+  </ol>
+
+  <p class="fecha">Sirve en cualquier celular o tablet con Android 8.0 o más nuevo.</p>
+
+</main>
+
+<footer>
+  <div class="caja">
+    <a href="index.html">Inicio</a>
+    <a href="historial.html">Historial de versiones</a>
+    <a href="privacidad.html">Aviso de privacidad</a>
+  </div>
+</footer>
+
+<script>
+fetch("version.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (v) {
+    var titulo = document.getElementById("version");
+    titulo.textContent = "";
+    var fuerte = document.createElement("strong");
+    fuerte.textContent = v.versionName;
+    titulo.appendChild(fuerte);
+    titulo.appendChild(document.createTextNode(" (compilación " + v.versionCode + ")"));
+    document.getElementById("fecha").textContent = "Publicada el " + v.fecha + ".";
+    document.getElementById("notas").textContent = v.notas || "";
+    var enlace = document.getElementById("descargar");
+    enlace.href = v.url;
+    enlace.setAttribute("download", "");
+    if (v.pesoMb) document.getElementById("peso").textContent = "Pesa " + v.pesoMb + " MB.";
+  })
+  .catch(function () {
+    document.getElementById("version").textContent =
+      "Todavía no hay ninguna versión publicada, o no se pudo leer. Recarga la página.";
+    document.getElementById("descargar").parentNode.remove();
+  });
+</script>
+
+</body>
+</html>
