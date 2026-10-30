@@ -1,10 +1,27 @@
 [
   {
+    "versionCode": 4,
+    "versionName": "1.0.3",
+    "fecha": "29 de octubre de 2026",
+    "pesoMb": 27,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.3-4/empapadas-pos-1.0.3-4.apk",
+    "notas": "Cada día empieza con su propio turno y los tickets vuelven a empezar en 1.",
+    "cambios": [
+      "Al abrir la app, si no hay turno, pide de inmediato con cuánto dinero empieza la caja.",
+      "Si quedó abierto un turno de otro día, se cierra solo y se empieza uno nuevo.",
+      "Los tickets (folios) empiezan en 1 en cada turno.",
+      "Los tickets van corridos: ya no se puede abrir otro ticket sin terminar el que está.",
+      "Por ahora (etapa de pruebas) el administrador puede borrar tickets desde Ventas del día y cortes desde Corte > Turnos anteriores. Productos y clientes no se tocan."
+    ],
+    "correcciones": [
+      "El número de ticket ya no sigue con el del día anterior."
+    ]
+  },
+  {
     "versionCode": 3,
     "versionName": "1.0.2",
     "fecha": "28 de octubre de 2026",
     "pesoMb": 27,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.2-3/empapadas-pos-1.0.2-3.apk",
     "notas": "Ahora puedes abrir el turno cuando quieras y la app te avisa cuando hay una versión nueva.",
     "cambios": [
       "Botón \"Iniciar turno\" en el menú lateral y en el menú de Ventas: pregunta cuánto dinero hay en la caja al empezar.",
