@@ -1,13 +1,15 @@
 {
-  "versionCode": 5,
-  "versionName": "1.0.4",
+  "versionCode": 6,
+  "versionName": "1.0.5",
   "fecha": "30 de octubre de 2026",
   "pesoMb": 27,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.4-5/empapadas-pos-1.0.4-5.apk",
-  "notas": "Deja limpio el 30 de octubre: se borran los turnos de prueba de ese día.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.5-6/empapadas-pos-1.0.5-6.apk",
+  "notas": "Calculadora para contar la caja en el corte y opción de entrar sin abrir turno.",
   "cambios": [
-    "Al instalarla, borra una sola vez los turnos del 30 de octubre con sus tickets, entradas, salidas y abonos; el inventario regresa a como estaba. Antes guarda un respaldo.",
-    "Después pide de nuevo con cuánto dinero empieza la caja para abrir el turno de verdad."
+    "Hacer corte: escribe cuántos billetes y monedas hay de cada uno; la suma se hace sola y se compara en vivo con lo que dice la app (sobrante o faltante).",
+    "El ticket del corte trae el conteo de la caja y la comparación: según la app, contado en caja y la diferencia.",
+    "Al abrir la app puedes elegir \"Iniciar sin abrir turno\" y abrirlo después desde el menú lateral (opción temporal).",
+    "La limpieza de los turnos de prueba del 30 de octubre ya no se repite si tenías la versión 1.0.4."
   ],
   "correcciones": []
 }
