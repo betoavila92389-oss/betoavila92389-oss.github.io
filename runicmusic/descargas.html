@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icono.png" type="image/png">
+<link rel="stylesheet" href="estilo.css">
+<title>Descargar RunicMusic</title>
+<meta name="description" content="Última versión de RunicMusic para Android.">
+</head>
+<body>
+
+<header>
+  <div class="caja">
+    <h1>Descargar la app</h1>
+    <div class="lema">RUNICMUSIC PARA ANDROID</div>
+    <nav><a href="index.html">Inicio</a><a href="historial.html">Historial de versiones</a></nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="tarjeta destacada">
+    <h2>Última versión</h2>
+    <p id="version" style="font-size:1.25rem;margin:8px 0"><strong>—</strong></p>
+    <p id="fecha" class="fecha" style="margin:0 0 4px"></p>
+    <p id="notas" style="margin:12px 0"></p>
+    <p style="margin-top:20px">
+      <a id="descargar" class="boton" href="#">Descargar la app</a>
+    </p>
+    <p id="peso" class="fecha"></p>
+  </div>
+
+  <h2>Cómo se instala</h2>
+  <ol>
+    <li>Abre esta página <strong>desde el celular</strong> y toca «Descargar la app».</li>
+    <li>Ábrela desde la notificación de descarga o desde «Mis archivos».</li>
+    <li>Si Android avisa que no puede instalar apps desconocidas, permítelo para el
+        navegador. Es normal: la app no viene de la Play Store.</li>
+    <li>Al abrirla, dale permiso de leer tu música. Tus canciones aparecen solas.</li>
+    <li>Las versiones nuevas se instalan encima de la anterior y no se pierde nada:
+        todas van firmadas con la misma llave. La app avisa sola cuando hay una.</li>
+  </ol>
+
+  <h2>Traer lo de la computadora</h2>
+  <ol>
+    <li>En la PC, copia al celular el archivo <code>~/.local/share/runicmusic/library.db</code>.</li>
+    <li>En la app: <strong>Ajustes &gt; Respaldo &gt; Traer de la computadora o de una copia</strong> y elige ese archivo.</li>
+    <li>Las canciones se emparejan por el nombre del archivo: tienen que estar también en el celular.</li>
+  </ol>
+
+  <p class="fecha">Sirve en cualquier celular o tablet con Android 8.0 o más nuevo.</p>
+
+</main>
+
+<footer>
+  <div class="caja">
+    <a href="index.html">Inicio</a>
+    <a href="historial.html">Historial de versiones</a>
+    <a href="privacidad.html">Aviso de privacidad</a>
+  </div>
+</footer>
+
+<script>
+fetch("version.json?" + Date.now())
+  .then(function (r) { return r.json(); })
+  .then(function (v) {
+    var titulo = document.getElementById("version");
+    titulo.textContent = "";
+    var fuerte = document.createElement("strong");
+    fuerte.textContent = v.versionName;
+    titulo.appendChild(fuerte);
+    titulo.appendChild(document.createTextNode(" (compilación " + v.versionCode + ")"));
+    document.getElementById("fecha").textContent = "Publicada el " + v.fecha + ".";
+    document.getElementById("notas").textContent = v.notas || "";
+    var enlace = document.getElementById("descargar");
+    enlace.href = v.url;
+    enlace.setAttribute("download", "");
+    if (v.pesoMb) document.getElementById("peso").textContent = "Pesa " + v.pesoMb + " MB.";
+  })
+  .catch(function () {
+    document.getElementById("version").textContent =
+      "Todavía no hay ninguna versión publicada, o no se pudo leer. Recarga la página.";
+    document.getElementById("descargar").parentNode.remove();
+  });
+</script>
+
+</body>
+</html>

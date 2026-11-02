@@ -1,0 +1,16 @@
+{
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "fecha": "2 de noviembre de 2026",
+  "pesoMb": 3,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.0.0-1/runicmusic-1.0.0-1.apk",
+  "notas": "La primera versión de RunicMusic para Android: tu música local, con lo mejor de Spotify, YouTube Music y Apple Music.",
+  "cambios": [
+    "Inicio con accesos rápidos, mixes del día, radio de cualquier canción y reproducción automática al acabar la cola.",
+    "Reproductor a pantalla completa con el color de la carátula, letra sincronizada, cola editable y visualizador.",
+    "Ecualizador de 10 bandas, temporizador para dormir, playlists y Me gusta.",
+    "Sigue sonando con la pantalla apagada, con controles en la notificación y en los audífonos.",
+    "Trae tus Me gusta, playlists e historial desde RunicMusic de la computadora."
+  ],
+  "correcciones": []
+}
