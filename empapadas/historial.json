@@ -1,10 +1,27 @@
 [
   {
+    "versionCode": 8,
+    "versionName": "1.0.7",
+    "fecha": "1 de noviembre de 2026",
+    "pesoMb": 27,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.7-8/empapadas-pos-1.0.7-8.apk",
+    "notas": "Girar el celular ya no cierra la app ni saca de la sesión. Protector de pantalla y reporte de errores.",
+    "cambios": [
+      "La pantalla ya no se apaga mientras la app está abierta: así no hay que volver a poner la huella o la contraseña del celular.",
+      "Protector de pantalla: si nadie toca la app, se pone oscura con el logo de Empapadas y con un toque regresas a donde ibas. Se elige a cuántos minutos en Configuración (3 de inicio).",
+      "Reportar un error: desde el menú lateral o la pantalla de entrada se puede mandar el reporte de errores por WhatsApp u otra app. Si la app se cierra por un error, lo ofrece al volver a abrirla."
+    ],
+    "correcciones": [
+      "La app se cerraba a veces al girar el celular o al salir y volver a entrar, porque el respaldo automático cerraba la base de datos mientras la pantalla la estaba usando.",
+      "Girar el celular sacaba de la sesión y regresaba a la pantalla de entrada.",
+      "Con el celular horizontal, el menú lateral no alcanzaba a enseñar las últimas opciones; ahora se desplaza."
+    ]
+  },
+  {
     "versionCode": 7,
     "versionName": "1.0.6",
     "fecha": "31 de octubre de 2026",
     "pesoMb": 27,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.6-7/empapadas-pos-1.0.6-7.apk",
     "notas": "Revisión de transferencias en el corte y fondo de caja contado con la calculadora.",
     "cambios": [
       "Hacer corte: escribe cuánto llegó de verdad por transferencia (según el banco) y la app lo compara con lo que tiene anotado: cuadran, sobran o faltan.",
