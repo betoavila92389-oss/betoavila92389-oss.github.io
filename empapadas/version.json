@@ -1,15 +1,19 @@
 {
-  "versionCode": 9,
-  "versionName": "1.0.8",
-  "fecha": "1 de noviembre de 2026",
+  "versionCode": 10,
+  "versionName": "1.0.9",
+  "fecha": "2 de noviembre de 2026",
   "pesoMb": 27,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.8-9/empapadas-pos-1.0.8-9.apk",
-  "notas": "Acomoda los botones de productos arrastrándolos. El protector de pantalla ya solo sale cuando de verdad no se está usando el celular.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.9-10/empapadas-pos-1.0.9-10.apk",
+  "notas": "La app ya se ve bien en tablet: letra más grande, productos en 4 columnas y tarjetas pintadas con el color de su departamento.",
   "cambios": [
-    "Botones de productos en Ventas: deja presionado un botón y arrástralo para acomodarlo donde quieras. El acomodo se guarda y un toque normal sigue agregando el producto al ticket.",
-    "El protector de pantalla ahora tapa también la barra de arriba del celular."
+    "En tablet todo se agranda parejo: letra, números, botones y ventanas.",
+    "Ventas con la tablet acostada: los productos van en 4 columnas y el campo de código queda arriba del ticket, para que los botones tengan más lugar.",
+    "Ventas con la tablet parada: el ticket se ve abajo de los botones, sin tener que abrirlo.",
+    "Tarjetas de productos pintadas completas con el color de su departamento y la franja de arriba más viva. Los filtros de departamento llevan el mismo color.",
+    "Al elegir un departamento las tarjetas aprovechan toda la pantalla, y los nombres largos se encogen para caber en lugar de cortarse.",
+    "En tablet los formularios y las listas quedan centrados en lugar de estirarse de orilla a orilla, y los botones de pago rápido son más grandes."
   ],
   "correcciones": [
-    "El protector de pantalla salía aunque se estuviera usando el celular: al trabajar en una ventana como Nuevo producto, al cerrarla con atrás o al mantener el dedo moviéndose en la pantalla."
+    "El botón COBRAR casi no se veía cuando el ticket estaba vacío."
   ]
 }
