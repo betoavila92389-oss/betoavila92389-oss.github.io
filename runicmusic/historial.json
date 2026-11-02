@@ -1,10 +1,28 @@
 [
   {
+    "versionCode": 2,
+    "versionName": "1.1.0",
+    "fecha": "2 de noviembre de 2026",
+    "pesoMb": 3,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.1.0-2/runicmusic-1.1.0-2.apk",
+    "notas": "Letras y carátulas que sí aparecen, solo tu carpeta runicMusic, eliminar canciones y mucho más fluida.",
+    "cambios": [
+      "Eliminar una canción del teléfono desde el menú ⋮ (siempre pregunta antes).",
+      "Por omisión solo carga la carpeta runicMusic y sus subcarpetas. En Ajustes puedes buscar en todo el teléfono.",
+      "La carátula de la canción que suena se busca al momento, aunque estés con datos.",
+      "La letra se sigue buscando sola si el servicio está saturado, y ya no te pide ningún archivo .lrc."
+    ],
+    "correcciones": [
+      "No salían las letras: la app se rendía al primer error del servicio y descartaba las de canciones con intro de video.",
+      "Carátulas borrosas: las tarjetas usaban una imagen demasiado pequeña, y «Desconocido» impedía encontrar la correcta.",
+      "El visualizador se veía trabado y adelantado: ahora va al compás de lo que se oye, y el reproductor grande es mucho más fluido."
+    ]
+  },
+  {
     "versionCode": 1,
     "versionName": "1.0.0",
     "fecha": "2 de noviembre de 2026",
     "pesoMb": 3,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.0.0-1/runicmusic-1.0.0-1.apk",
     "notas": "La primera versión de RunicMusic para Android: tu música local, con lo mejor de Spotify, YouTube Music y Apple Music.",
     "cambios": [
       "Inicio con accesos rápidos, mixes del día, radio de cualquier canción y reproducción automática al acabar la cola.",
