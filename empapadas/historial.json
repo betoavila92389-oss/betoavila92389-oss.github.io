@@ -1,10 +1,24 @@
 [
   {
+    "versionCode": 9,
+    "versionName": "1.0.8",
+    "fecha": "1 de noviembre de 2026",
+    "pesoMb": 27,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.8-9/empapadas-pos-1.0.8-9.apk",
+    "notas": "Acomoda los botones de productos arrastrándolos. El protector de pantalla ya solo sale cuando de verdad no se está usando el celular.",
+    "cambios": [
+      "Botones de productos en Ventas: deja presionado un botón y arrástralo para acomodarlo donde quieras. El acomodo se guarda y un toque normal sigue agregando el producto al ticket.",
+      "El protector de pantalla ahora tapa también la barra de arriba del celular."
+    ],
+    "correcciones": [
+      "El protector de pantalla salía aunque se estuviera usando el celular: al trabajar en una ventana como Nuevo producto, al cerrarla con atrás o al mantener el dedo moviéndose en la pantalla."
+    ]
+  },
+  {
     "versionCode": 8,
     "versionName": "1.0.7",
     "fecha": "1 de noviembre de 2026",
     "pesoMb": 27,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.7-8/empapadas-pos-1.0.7-8.apk",
     "notas": "Girar el celular ya no cierra la app ni saca de la sesión. Protector de pantalla y reporte de errores.",
     "cambios": [
       "La pantalla ya no se apaga mientras la app está abierta: así no hay que volver a poner la huella o la contraseña del celular.",
