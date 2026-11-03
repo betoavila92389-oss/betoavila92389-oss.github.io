@@ -1,10 +1,27 @@
 [
   {
+    "versionCode": 4,
+    "versionName": "1.3.0",
+    "fecha": "3 de noviembre de 2026",
+    "pesoMb": 3,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.3.0-4/runicmusic-1.3.0-4.apk",
+    "notas": "Tu foto de perfil y tu nombre, y una sesión de Google que ya no se pierde.",
+    "cambios": [
+      "Foto de perfil arriba a la izquierda: la de tu cuenta de Google o una que elijas tú, y se comparte con la computadora.",
+      "Inicio te saluda por tu nombre.",
+      "Al iniciar sesión sale la ventana oficial de Google para elegir tu cuenta.",
+      "Ajustes muestra con qué cuenta entraste, y te deja cambiarla o volver a entrar."
+    ],
+    "correcciones": [
+      "«Google pide volver a iniciar sesión» no se quitaba aunque volvieras a entrar: ahora el permiso se renueva solo.",
+      "Ajustes se quedaba en «Comparando con tu Drive…» si llegaba un cambio a media comparación."
+    ]
+  },
+  {
     "versionCode": 3,
     "versionName": "1.2.0",
     "fecha": "2 de noviembre de 2026",
     "pesoMb": 3,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.2.0-3/runicmusic-1.2.0-3.apk",
     "notas": "Inicia sesión con Google si quieres: tus Me gusta, playlists y canciones eliminadas coinciden entre el teléfono y la computadora, y puedes seguir en uno lo que escuchabas en el otro.",
     "cambios": [
       "Cuenta de Google opcional, en Ajustes. La copia se guarda en una carpeta privada de tu propio Google Drive; tu música no se sube y la app no ve tus demás archivos.",
