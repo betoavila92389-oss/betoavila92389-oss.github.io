@@ -1,10 +1,24 @@
 [
   {
+    "versionCode": 3,
+    "versionName": "1.2.0",
+    "fecha": "2 de noviembre de 2026",
+    "pesoMb": 3,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.2.0-3/runicmusic-1.2.0-3.apk",
+    "notas": "Inicia sesión con Google si quieres: tus Me gusta, playlists y canciones eliminadas coinciden entre el teléfono y la computadora, y puedes seguir en uno lo que escuchabas en el otro.",
+    "cambios": [
+      "Cuenta de Google opcional, en Ajustes. La copia se guarda en una carpeta privada de tu propio Google Drive; tu música no se sube y la app no ve tus demás archivos.",
+      "«Continuar desde tu PC»: si estabas escuchando en la computadora, te ofrece seguir con la misma canción, en el mismo segundo y con la misma cola.",
+      "Lo que eliminas en el teléfono se elimina también en la computadora al sincronizar, y al revés. Antes de borrar, la sincronización te pregunta.",
+      "Las canciones se reconocen por su audio y no por el nombre del archivo, y borrar solo ocurre si consta que alguien las eliminó: un teléfono vacío ya no puede dejar sin música a la computadora."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 2,
     "versionName": "1.1.0",
     "fecha": "2 de noviembre de 2026",
     "pesoMb": 3,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.1.0-2/runicmusic-1.1.0-2.apk",
     "notas": "Letras y carátulas que sí aparecen, solo tu carpeta runicMusic, eliminar canciones y mucho más fluida.",
     "cambios": [
       "Eliminar una canción del teléfono desde el menú ⋮ (siempre pregunta antes).",
