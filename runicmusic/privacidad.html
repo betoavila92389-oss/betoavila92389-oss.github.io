@@ -6,14 +6,14 @@
 <link rel="icon" href="icono.png" type="image/png">
 <link rel="stylesheet" href="estilo.css">
 <title>Aviso de privacidad · RunicMusic</title>
-<meta name="description" content="Qué información usa RunicMusic y dónde se guarda.">
+<meta name="description" content="Qué información usa RunicMusic, qué hace con tu cuenta de Google y dónde se guarda.">
 </head>
 <body>
 
 <header>
   <div class="caja">
     <h1>Aviso de privacidad</h1>
-    <div class="lema">RUNICMUSIC PARA ANDROID</div>
+    <div class="lema">RUNICMUSIC PARA ANDROID Y COMPUTADORA</div>
     <nav><a href="index.html">Inicio</a><a href="descargas.html">Descargar la app</a></nav>
   </div>
 </header>
@@ -22,12 +22,34 @@
 
 <p class="fecha">Última actualización: 2 de noviembre de 2026.</p>
 
-<h2>Tu música se queda en tu teléfono</h2>
-<p>Tus canciones, tus Me gusta, tus playlists y tu historial se guardan <strong>solo en el teléfono</strong>. RunicMusic no
-tiene cuentas, servidor, publicidad ni analítica, y nunca modifica tus archivos de música. Solo borra una canción si tú eliges
-«Eliminar del teléfono» y lo confirmas.</p>
+<h2>Tu música se queda en tus aparatos</h2>
+<p>Tus canciones se guardan <strong>solo en tu teléfono y en tu computadora</strong>: los archivos de música nunca se suben a ningún
+lado. RunicMusic no tiene servidor propio, publicidad ni analítica, y nunca modifica el contenido de tus archivos. Solo borra una canción si
+tú la eliminas y lo confirmas, en el aparato donde lo haces, y, al sincronizar, en tu otro aparato.</p>
 
-<h2>Lo único que sale del teléfono</h2>
+<h2>Tu cuenta de Google (opcional)</h2>
+<p>La app funciona sin cuenta. Desde la versión 1.2.0 del celular y la 1.9.0 de escritorio puedes iniciar sesión con Google para mantener tus
+aparatos de acuerdo y continuar en uno lo que escuchabas en el otro. Si lo haces:</p>
+<table>
+  <thead><tr><th>Permiso de Google</th><th>Para qué</th></tr></thead>
+  <tbody>
+    <tr><td>Tu dirección de correo</td><td>Mostrar en Ajustes con qué cuenta entraste. Se guarda solo en tu aparato.</td></tr>
+    <tr><td>Carpeta privada de la app en tu Google Drive (<code>drive.appdata</code>)</td><td>Guardar la copia descrita abajo. <strong>La app no puede ver ni tocar tus demás archivos de Drive.</strong></td></tr>
+  </tbody>
+</table>
+<p>En esa carpeta privada de <strong>tu propio Drive</strong> se guarda: tus Me gusta, playlists, cuántas veces escuchaste cada canción, tu historial
+reciente, la lista de canciones (título, artista, ruta dentro de tu carpeta de música y una huella calculada de su audio), las que eliminaste,
+y qué estabas escuchando (canción, segundo y cola) con el nombre del aparato. Nada de esto pasa por un servidor de RunicMusic: la app habla directamente con Google, y
+los permisos de acceso se quedan en tu aparato.</p>
+<p>Estos datos se usan solo para esas funciones. <strong>No se venden, no se comparten con nadie y no se usan para publicidad ni para entrenar
+inteligencia artificial.</strong> El uso de la información recibida de las API de Google se ajusta a la
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Datos de Usuario de los Servicios de API de Google</a>,
+incluidos sus requisitos de Uso Limitado.</p>
+<p><strong>Para quitarlo todo:</strong> en Ajustes, cierra la sesión; retira el permiso en
+<a href="https://myaccount.google.com/permissions">tu cuenta de Google</a>; y borra la copia en Google Drive desde Configuración &gt;
+Administrar aplicaciones &gt; RunicMusic &gt; «Borrar datos ocultos de la app».</p>
+
+<h2>Lo demás que sale de tu aparato</h2>
 <table>
   <thead><tr><th>A quién</th><th>Qué se manda</th><th>Para qué</th></tr></thead>
   <tbody>
@@ -44,7 +66,7 @@ tiene cuentas, servidor, publicidad ni analítica, y nunca modifica tus archivos
   <tbody>
     <tr><td>Música y audio</td><td>Leer tus canciones. Sin esto la app no puede ver tu música.</td></tr>
     <tr><td>Notificaciones y segundo plano</td><td>Los controles de la música y que siga sonando con la pantalla apagada.</td></tr>
-    <tr><td>Internet</td><td>Lo de la tabla de arriba.</td></tr>
+    <tr><td>Internet</td><td>Lo de la tabla de arriba y, si iniciaste sesión, tu Google Drive.</td></tr>
     <tr><td>Todos los archivos (opcional)</td><td>Solo si lo activas en Ajustes: leer archivos <code>.lrc</code> y <code>cover.jpg</code> junto a tus canciones. Nunca se escribe en ellos.</td></tr>
   </tbody>
 </table>
@@ -55,8 +77,8 @@ tiene cuentas, servidor, publicidad ni analítica, y nunca modifica tus archivos
 lleva tu lista de canciones. Solo sale del aparato si decides compartirla.</p>
 
 <h2>Respaldos</h2>
-<p>La copia de tus Me gusta, playlists e historial solo se crea si la pides, y se guarda donde tú elijas. La app no
-se respalda sola en ninguna nube.</p>
+<p>Sin cuenta de Google, la copia de tus Me gusta, playlists e historial solo se crea si la pides, y se guarda donde tú elijas. La app
+solo se respalda sola en la nube si inicias sesión con Google, y solo en tu propio Drive, como se explica arriba.</p>
 
 </main>
 
@@ -65,7 +87,8 @@ se respalda sola en ninguna nube.</p>
     <a href="index.html">Inicio</a>
     <a href="descargas.html">Descargar la app</a>
     <a href="historial.html">Historial de versiones</a>
-  </div>
+      <a href="terminos.html">Condiciones del servicio</a>
+</div>
 </footer>
 
 </body>
