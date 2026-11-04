@@ -1,18 +1,16 @@
 {
-  "versionCode": 11,
-  "versionName": "1.0.10",
-  "fecha": "2 de noviembre de 2026",
+  "versionCode": 12,
+  "versionName": "1.0.11",
+  "fecha": "4 de noviembre de 2026",
   "pesoMb": 27,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.10-11/empapadas-pos-1.0.10-11.apk",
-  "notas": "Los botones de Ventas ya no tienen scroll: siempre caben todos los productos y se redimensionan.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.11-12/empapadas-pos-1.0.11-12.apk",
+  "notas": "Al acomodar los botones de Ventas ya solo se cambian de lugar dos tarjetas: la que mueves y la que está donde la sueltas.",
   "cambios": [
-    "Botones de productos en Ventas sin scroll: al agregar productos, las tarjetas se ajustan para que siempre se vean todos, en horizontal y en vertical.",
-    "Con la tablet acostada se mantienen 4 columnas mientras las tarjetas se puedan leer. Cuando quedan bajitas, el nombre y el precio van lado a lado.",
-    "Con el teclado en pantalla abierto los botones se quedan en su lugar; al cerrarlo todo sigue igual."
+    "Al arrastrar una tarjeta y soltarla sobre otra, esas dos se cambian de lugar y todas las demás se quedan donde estaban.",
+    "Mientras arrastras, ninguna tarjeta se mueve. La tarjeta con la que se va a cambiar se marca con un borde negro.",
+    "Si la sueltas donde no hay otra tarjeta, regresa a su lugar y no cambia nada."
   ],
   "correcciones": [
-    "Con la tablet acostada, los productos nuevos quedaban sin verse al pasar de los que cabían.",
-    "En tarjetas muy chicas el precio podía cortarse; ahora se encoge y siempre sale completo.",
-    "A la última fila de botones se le cortaba el borde de abajo."
+    "Al soltar una tarjeta se recorrían todas las que estaban entre su lugar y el nuevo."
   ]
 }
