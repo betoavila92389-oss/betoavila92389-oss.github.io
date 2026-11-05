@@ -1,10 +1,23 @@
 [
   {
+    "versionCode": 13,
+    "versionName": "1.0.12",
+    "fecha": "4 de noviembre de 2026",
+    "pesoMb": 27,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.12-13/empapadas-pos-1.0.12-13.apk",
+    "notas": "La app gasta menos batería: el protector de pantalla ahora baja el brillo al mínimo.",
+    "cambios": [
+      "Cuando entra el protector de pantalla, el brillo baja al mínimo. Con un toque regresa al brillo que tenga la tablet.",
+      "En las tablets con pantalla de 90 o 120 Hz, la app trabaja a 60 Hz para gastar menos batería.",
+      "La app revisa con menos frecuencia si la están usando: el protector puede tardar unos segundos más en entrar."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 12,
     "versionName": "1.0.11",
     "fecha": "4 de noviembre de 2026",
     "pesoMb": 27,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.11-12/empapadas-pos-1.0.11-12.apk",
     "notas": "Al acomodar los botones de Ventas ya solo se cambian de lugar dos tarjetas: la que mueves y la que está donde la sueltas.",
     "cambios": [
       "Al arrastrar una tarjeta y soltarla sobre otra, esas dos se cambian de lugar y todas las demás se quedan donde estaban.",
