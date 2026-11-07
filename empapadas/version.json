@@ -1,18 +1,21 @@
 {
-  "versionCode": 14,
-  "versionName": "1.0.13",
+  "versionCode": 15,
+  "versionName": "1.0.14",
   "fecha": "7 de noviembre de 2026",
-  "pesoMb": 27,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.13-14/empapadas-pos-1.0.13-14.apk",
-  "notas": "El corte ahora dice hasta arriba cuánto se ganó, con lo que de verdad hay en la caja y en el banco.",
+  "pesoMb": 28,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/empapadas-v1.0.14-15/empapadas-pos-1.0.14-15.apk",
+  "notas": "Ahora se entra con la cuenta de Google del negocio: la tablet y el celular comparten las ventas al momento y los respaldos se guardan en Google Drive.",
   "cambios": [
-    "Ganancia del corte: efectivo contado en la caja + transferencias que llegaron al banco - fondo con que se empezó (y lo que se metió a la caja como entrada). Sale hasta arriba en la pantalla y en el ticket.",
-    "El sobrante o faltante de la caja y de las transferencias ya va sumado o restado en la ganancia, y el ticket lo explica en una nota. Las salidas también ya van descontadas.",
-    "Al hacer el corte, abajo se ve la ganancia del turno mientras cuentas los billetes y escribes las transferencias.",
-    "El corte ya no muestra renglones en cero ni cantidades repetidas, y los renglones largos del ticket ya no se cortan.",
-    "Calculadora de billetes y demás ventanas con campos: el cuadro donde escribes se sube junto con el teclado, también al darle Enter para pasar al siguiente. Mientras el teclado está abierto, los totales de abajo se hacen chicos para que quepa el cuadro."
+    "Al abrir la app se entra con la cuenta de Google del negocio (solo la primera vez; luego se recuerda). Después se elige quién atiende, como siempre.",
+    "Todos los aparatos con la misma cuenta ven las mismas ventas, productos, clientes y turnos en segundos. Si la tablet se queda sin batería, sigues cobrando en el celular en el mismo turno.",
+    "Sin internet se sigue vendiendo: lo de ese rato se sube solo al volver la señal.",
+    "Entra primero con la tablet (la que tiene la información): la sube a la nube. Luego el celular la baja.",
+    "Cada aparato tiene sus propios folios para que nunca se repitan: la tablet 1, 2, 3… y el celular 1001, 1002…",
+    "Respaldo diario en tu Google Drive (carpeta \"Empapadas POS - Respaldos\"), al salir de la app y al hacer el corte. Nuevo apartado en Configuración: Cuenta de Google y nube.",
+    "Enter pasa al siguiente cuadro en todos los formularios (no solo en la calculadora), y el cuadro sube junto con el teclado."
   ],
   "correcciones": [
-    "El teclado ya no tapa el cuadro donde se está escribiendo."
+    "Vender un producto que se borró mientras estaba en el ticket ya cerraba la app; ahora se vende normal.",
+    "Si algo falla al guardar, la app avisa en vez de cerrarse, y no guarda nada a medias."
   ]
 }
