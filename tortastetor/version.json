@@ -1,0 +1,17 @@
+{
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "fecha": "18 de noviembre de 2026",
+  "pesoMb": 6,
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v1.0.0-1/tortastetor-pos-1.0.0-1.apk",
+  "notas": "Primera versión de Tortas Tetor POS, para revisarla antes de usarla en el negocio.",
+  "cambios": [
+    "Menú con los precios del menú impreso",
+    "Lista para la impresora JP-58H de 58 mm, con cajón de dinero",
+    "Varios pedidos abiertos, armar la torta, para aquí, para llevar y a domicilio",
+    "Domicilios que se mandan sin cobrar y se cobran al regresar",
+    "La noche cuenta hasta las 6 de la mañana en cortes y reportes",
+    "Tablet y celulares sincronizados con la misma cuenta de Google, y respaldos en Drive"
+  ],
+  "correcciones": []
+}
