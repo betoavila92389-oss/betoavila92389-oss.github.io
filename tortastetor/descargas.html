@@ -34,6 +34,14 @@
     <p id="peso" class="fecha"></p>
   </div>
 
+  <div class="tarjeta" id="prueba" hidden>
+    <h2>Versión de prueba</h2>
+    <p id="prueba-version" style="margin:8px 0"></p>
+    <p id="prueba-notas" style="margin:12px 0"></p>
+    <p><strong>No la instales en los aparatos del negocio:</strong> es la misma app y se pone en lugar de la de arriba.</p>
+    <p style="margin-top:16px"><a id="prueba-descargar" class="boton" href="#">Descargar la versión de prueba</a></p>
+  </div>
+
   <h2>Cómo se instala</h2>
   <ol>
     <li>Abre esta página <strong>desde el celular</strong> y toca «Descargar la app».</li>
@@ -86,6 +94,21 @@ fetch("version.json?" + Date.now())
       "Todavía no hay ninguna versión publicada, o no se pudo leer. Recarga la página.";
     document.getElementById("descargar").parentNode.remove();
   });
+</script>
+<script>
+// La versión de prueba solo aparece si hay una publicada (la escribe publicar-prueba.sh en prueba.json).
+fetch("prueba.json?" + Date.now())
+  .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+  .then(function (v) {
+    document.getElementById("prueba-version").textContent =
+      v.versionName + " · publicada el " + v.fecha + (v.pesoMb ? " · pesa " + v.pesoMb + " MB" : "");
+    document.getElementById("prueba-notas").textContent = v.notas || "";
+    var enlace = document.getElementById("prueba-descargar");
+    enlace.href = v.url;
+    enlace.setAttribute("download", "");
+    document.getElementById("prueba").hidden = false;
+  })
+  .catch(function () {});
 </script>
 
 </body>
