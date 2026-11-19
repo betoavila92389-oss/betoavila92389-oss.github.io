@@ -1,17 +1,15 @@
 {
-  "versionCode": 1,
-  "versionName": "1.0.0",
+  "versionCode": 2,
+  "versionName": "1.0.1",
   "fecha": "18 de noviembre de 2026",
   "pesoMb": 6,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v1.0.0-1/tortastetor-pos-1.0.0-1.apk",
-  "notas": "Primera versión de Tortas Tetor POS, para revisarla antes de usarla en el negocio.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v1.0.1-2/tortastetor-pos-1.0.1-2.apk",
+  "notas": "Mesas y Pedidos más claros.",
   "cambios": [
-    "Menú con los precios del menú impreso",
-    "Lista para la impresora JP-58H de 58 mm, con cajón de dinero",
-    "Varios pedidos abiertos, armar la torta, para aquí, para llevar y a domicilio",
-    "Domicilios que se mandan sin cobrar y se cobran al regresar",
-    "La noche cuenta hasta las 6 de la mañana en cortes y reportes",
-    "Tablet y celulares sincronizados con la misma cuenta de Google, y respaldos en Drive"
+    "Mesas: se dan de alta en Configuración > Horario, mesas, pedidos y domicilio",
+    "Al tomar un pedido para aquí se elige la mesa; sale en la pestaña del pedido, en la comanda y en el ticket",
+    "Pedidos dice en grande si es para aquí (con la mesa), para llevar o a domicilio, y si falta cobrar o ya está pagado",
+    "Pedidos se filtra por para aquí, para llevar, a domicilio o por cobrar"
   ],
   "correcciones": []
 }
