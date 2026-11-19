@@ -1,15 +1,17 @@
 {
-  "versionCode": 2,
-  "versionName": "1.0.1",
+  "versionCode": 3,
+  "versionName": "2.0",
   "fecha": "18 de noviembre de 2026",
   "pesoMb": 6,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v1.0.1-2/tortastetor-pos-1.0.1-2.apk",
-  "notas": "Mesas y Pedidos más claros.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v2.0-3/tortastetor-pos-2.0-3.apk",
+  "notas": "Versión 2.0: cada quien ve solo lo de su puesto (mesero, cajero, cocinero o administrador) y hay pantalla de Cocina.",
   "cambios": [
-    "Mesas: se dan de alta en Configuración > Horario, mesas, pedidos y domicilio",
-    "Al tomar un pedido para aquí se elige la mesa; sale en la pestaña del pedido, en la comanda y en el ticket",
-    "Pedidos dice en grande si es para aquí (con la mesa), para llevar o a domicilio, y si falta cobrar o ya está pagado",
-    "Pedidos se filtra por para aquí, para llevar, a domicilio o por cobrar"
+    "Puestos en Configuración > Personal y puestos: mesero, cajero, cocinero y administrador",
+    "El mesero solo toma la orden (quitar o agregar ingredientes y notas) y la manda a la cocina; no cobra",
+    "El cajero vende, cobra y ve los pedidos; el corte, los reportes y la configuración son del administrador",
+    "Nueva sección Cocina: los pedidos por preparar, en orden, con lo que se le quita o se le agrega a cada uno, y el botón «Ya está listo»",
+    "El aparato de la cocina puede imprimir las comandas que mandan los demás (Configuración > Impresora)",
+    "Kevin y Ricardo quedan como cajeros: si deben hacer el corte, el administrador se lo da en Personal y puestos"
   ],
   "correcciones": []
 }
