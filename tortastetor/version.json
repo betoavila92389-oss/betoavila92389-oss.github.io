@@ -1,21 +1,17 @@
 {
-  "versionCode": 5,
-  "versionName": "2.2",
+  "versionCode": 6,
+  "versionName": "2.3",
   "fecha": "22 de noviembre de 2026",
   "pesoMb": 6,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v2.2-5/tortastetor-pos-2.2-5.apk",
-  "notas": "Versión 2.2: tickets con acentos y logo, diseño del ticket y la comanda, y entrar con PIN como en Loyverse.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v2.3-6/tortastetor-pos-2.3-6.apk",
+  "notas": "Versión 2.3: el ticket y la comanda ya no salen pegados, y se puede usar otra impresora para las comandas.",
   "cambios": [
-    "Configuración > Diseño del ticket y la comanda: logo, nombre, encabezado, pie, qué datos salen y el tamaño de la letra, con vista previa e «Imprimir ejemplo»",
-    "El ticket lleva el logo del negocio",
-    "Entrar con PIN en un teclado de números grande; la primera vez cada quien crea un PIN de 4 números",
-    "Pestaña ★ Favoritos en Ventas (se cambia en Productos > «En Favoritos»)",
-    "En la tablet, el total y los botones «Mandar sin cobrar» y «Cobrar» quedan arriba",
-    "Nuevos extras: carne y piña ($10); para quitar: mantequilla y lácteos; y «Cómo la quiere» sin costo: partida en 2, a la micha, con salsa y con curtidos"
+    "Al cobrar sale el ticket y aparece «Arranca el ticket»: la comanda se imprime cuando tocas «IMPRIMIR COMANDA»",
+    "Configuración > Impresora > Comandas (cocina): con una segunda impresora, las comandas salen en la de la cocina y los tickets en la de la caja",
+    "Con una sola impresora todo sale en la misma, como antes",
+    "Al entrar por primera vez y en Personal y puestos ya dice «PIN» en lugar de contraseña"
   ],
   "correcciones": [
-    "Los acentos y la ñ ya salen en la impresora JP-58H: el papel se manda como imagen",
-    "El final del ticket ya no sale cortado",
-    "Configuración > Impresora: «Imprimir prueba de letras» por si alguna impresora no pone bien los acentos"
+    "Si la impresora de la cocina falla, la venta sigue y el ticket sale en la de la caja"
   ]
 }
