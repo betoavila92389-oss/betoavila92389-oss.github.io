@@ -1,18 +1,14 @@
 {
-  "versionCode": 4,
-  "versionName": "1.3.0",
-  "fecha": "3 de noviembre de 2026",
+  "versionCode": 5,
+  "versionName": "1.4.0",
+  "fecha": "22 de noviembre de 2026",
   "pesoMb": 3,
-  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.3.0-4/runicmusic-1.3.0-4.apk",
-  "notas": "Tu foto de perfil y tu nombre, y una sesión de Google que ya no se pierde.",
+  "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.4.0-5/runicmusic-1.4.0-5.apk",
+  "notas": "Ya no hace falta venir a la página: desde esta versión, RunicMusic se actualiza con un botón.",
   "cambios": [
-    "Foto de perfil arriba a la izquierda: la de tu cuenta de Google o una que elijas tú, y se comparte con la computadora.",
-    "Inicio te saluda por tu nombre.",
-    "Al iniciar sesión sale la ventana oficial de Google para elegir tu cuenta.",
-    "Ajustes muestra con qué cuenta entraste, y te deja cambiarla o volver a entrar."
+    "Al tocar «Actualizar», RunicMusic baja la versión nueva ahí mismo y Android te pregunta si la instalas.",
+    "La primera vez, Android pide permitir que RunicMusic instale apps. Se hace una sola vez.",
+    "Antes de instalar, RunicMusic comprueba que el archivo lleve su misma firma."
   ],
-  "correcciones": [
-    "«Google pide volver a iniciar sesión» no se quitaba aunque volvieras a entrar: ahora el permiso se renueva solo.",
-    "Ajustes se quedaba en «Comparando con tu Drive…» si llegaba un cambio a media comparación."
-  ]
+  "correcciones": []
 }

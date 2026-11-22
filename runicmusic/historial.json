@@ -1,10 +1,23 @@
 [
   {
+    "versionCode": 5,
+    "versionName": "1.4.0",
+    "fecha": "22 de noviembre de 2026",
+    "pesoMb": 3,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.4.0-5/runicmusic-1.4.0-5.apk",
+    "notas": "Ya no hace falta venir a la página: desde esta versión, RunicMusic se actualiza con un botón.",
+    "cambios": [
+      "Al tocar «Actualizar», RunicMusic baja la versión nueva ahí mismo y Android te pregunta si la instalas.",
+      "La primera vez, Android pide permitir que RunicMusic instale apps. Se hace una sola vez.",
+      "Antes de instalar, RunicMusic comprueba que el archivo lleve su misma firma."
+    ],
+    "correcciones": []
+  },
+  {
     "versionCode": 4,
     "versionName": "1.3.0",
     "fecha": "3 de noviembre de 2026",
     "pesoMb": 3,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/runicmusic-v1.3.0-4/runicmusic-1.3.0-4.apk",
     "notas": "Tu foto de perfil y tu nombre, y una sesión de Google que ya no se pierde.",
     "cambios": [
       "Foto de perfil arriba a la izquierda: la de tu cuenta de Google o una que elijas tú, y se comparte con la computadora.",
