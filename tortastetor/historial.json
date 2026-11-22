@@ -1,10 +1,30 @@
 [
   {
+    "versionCode": 5,
+    "versionName": "2.2",
+    "fecha": "22 de noviembre de 2026",
+    "pesoMb": 6,
+    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v2.2-5/tortastetor-pos-2.2-5.apk",
+    "notas": "Versión 2.2: tickets con acentos y logo, diseño del ticket y la comanda, y entrar con PIN como en Loyverse.",
+    "cambios": [
+      "Configuración > Diseño del ticket y la comanda: logo, nombre, encabezado, pie, qué datos salen y el tamaño de la letra, con vista previa e «Imprimir ejemplo»",
+      "El ticket lleva el logo del negocio",
+      "Entrar con PIN en un teclado de números grande; la primera vez cada quien crea un PIN de 4 números",
+      "Pestaña ★ Favoritos en Ventas (se cambia en Productos > «En Favoritos»)",
+      "En la tablet, el total y los botones «Mandar sin cobrar» y «Cobrar» quedan arriba",
+      "Nuevos extras: carne y piña ($10); para quitar: mantequilla y lácteos; y «Cómo la quiere» sin costo: partida en 2, a la micha, con salsa y con curtidos"
+    ],
+    "correcciones": [
+      "Los acentos y la ñ ya salen en la impresora JP-58H: el papel se manda como imagen",
+      "El final del ticket ya no sale cortado",
+      "Configuración > Impresora: «Imprimir prueba de letras» por si alguna impresora no pone bien los acentos"
+    ]
+  },
+  {
     "versionCode": 4,
     "versionName": "2.1",
     "fecha": "18 de noviembre de 2026",
     "pesoMb": 6,
-    "url": "https://github.com/betoavila92389-oss/betoavila92389-oss.github.io/releases/download/tortastetor-v2.1-4/tortastetor-pos-2.1-4.apk",
     "notas": "Versión 2.1: subcorte, clientes que se encuentran por teléfono, puesto «Todo en uno» e impresora por Wi-Fi.",
     "cambios": [
       "Subcorte (Corte > Subcorte, o Ventas > menú): saca los billetes de más a media noche sin cerrar el turno; imprime su papel y el corte final lo toma en cuenta",
