@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tortas Tetor · Instructivo de la app</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../icono.png" type="image/png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Fira+Sans+Condensed:wght@800&display=swap">
+<style>
+
+@page { size: letter; margin: 0.55in 0.6in 0.6in 0.6in; }
+:root { --marino: #1B2A5C; --azul: #2F4A9C; --rojo: #D1342C; --rojoOsc: #A5241E; --dorado: #E5B04A; --crema: #FBF8F1; --texto: #23252b; --gris: #5d6270; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: 'Fira Sans', sans-serif; font-size: 11.5pt; line-height: 1.45; color: var(--texto); }
+
+/* Portada */
+.portada { height: 9.8in; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; page-break-after: always; }
+.portada img { width: 2.9in; }
+.portada h1 { font-family: 'Fira Sans Condensed', 'Fira Sans', sans-serif; font-weight: 800; font-size: 44pt; color: var(--marino); margin: 0.35in 0 0.05in; line-height: 1; }
+.portada .sub { font-size: 17pt; color: var(--rojoOsc); font-weight: 600; }
+.portada .franjas { width: 4.5in; margin: 0.3in auto; }
+.franjas div { height: 7px; border-radius: 4px; margin: 4px 0; }
+.franjas .a { background: var(--azul); } .franjas .r { background: var(--rojo); }
+.portada .datos { color: var(--gris); font-size: 11pt; margin-top: 0.2in; }
+
+/* Títulos */
+h2 { font-family: 'Fira Sans Condensed', 'Fira Sans', sans-serif; font-weight: 800; font-size: 24pt; color: var(--marino); margin: 0 0 4px; line-height: 1.1; }
+h2 .n { color: var(--rojo); margin-right: 8px; }
+.seccion { page-break-before: always; }
+.seccion > .franjas { width: 100%; margin: 0 0 14px; }
+.seccion > .franjas div { height: 4px; margin: 2px 0; }
+h3 { font-size: 13.5pt; color: var(--rojoOsc); margin: 16px 0 4px; font-weight: 700; }
+p { margin: 6px 0; }
+ol, ul { margin: 6px 0; padding-left: 22px; }
+li { margin: 3px 0; }
+b { font-weight: 700; color: #000; }
+.boton { display: inline-block; font-weight: 700; font-size: 10pt; padding: 0 7px; border-radius: 5px; background: var(--rojo); color: #fff; white-space: nowrap; line-height: 1.55; }
+.boton.amarillo { background: var(--dorado); color: var(--marino); }
+.boton.blanco { background: #fff; color: var(--marino); border: 1px solid #cfc6b4; }
+.boton.azul { background: var(--marino); color: #fff; }
+
+/* Texto con foto al lado */
+.fila { display: flex; gap: 22px; align-items: flex-start; margin: 10px 0 14px; page-break-inside: avoid; }
+.fila .texto { flex: 1; }
+figure { margin: 0; flex: none; width: 2.35in; text-align: center; page-break-inside: avoid; }
+figure img { width: 100%; border-radius: 10px; border: 1px solid #c9c2b2; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+figure figcaption { font-size: 8.5pt; color: var(--gris); margin-top: 3px; }
+.fotos { display: flex; gap: 16px; justify-content: center; margin: 10px 0 14px; page-break-inside: avoid; }
+.fotos figure { width: 2.15in; }
+
+/* Avisos */
+.nota, .ojo, .tip { border-radius: 10px; padding: 9px 13px; margin: 10px 0; page-break-inside: avoid; }
+.nota { background: #eef1fa; border-left: 5px solid var(--azul); }
+.ojo { background: #fdecea; border-left: 5px solid var(--rojo); }
+.tip { background: #fdf5e2; border-left: 5px solid var(--dorado); }
+.nota b:first-child, .ojo b:first-child, .tip b:first-child { color: inherit; }
+
+/* Índice */
+.indice { columns: 2; column-gap: 0.4in; font-size: 11.5pt; padding: 0; list-style: none; }
+.indice li { break-inside: avoid; padding: 3px 0; border-bottom: 1px dotted #ccc; }
+.indice li span { color: var(--rojo); font-weight: 700; display: inline-block; width: 28px; }
+
+table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 10.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #ddd5c4; padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: var(--marino); color: #fff; font-weight: 600; }
+tr:nth-child(even) td { background: #faf7f0; }
+.lista-noche li { margin: 5px 0; }
+table.apretada { font-size: 9.8pt; } table.apretada td, table.apretada th { padding: 4px 7px; }
+.pie { color: var(--gris); font-size: 9.5pt; text-align: center; margin-top: 18px; }
+
+@media screen {
+  body { max-width: 860px; margin: 0 auto; padding: 0 16px 40px; background: #FBF8F1; }
+  .portada { height: auto; padding: 40px 0 10px; }
+  .seccion { margin-top: 44px; }
+  .barra { position: sticky; top: 0; z-index: 2; background: var(--marino); color: #fff; margin: 0 -16px; padding: 10px 16px;
+           display: flex; gap: 12px; align-items: center; justify-content: space-between; }
+  .barra a { color: var(--marino); background: var(--dorado); font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 8px; white-space: nowrap; }
+  .barra span { font-weight: 600; }
+}
+@media screen and (max-width: 640px) {
+  .fila { flex-direction: column; align-items: center; }
+  .fotos { flex-wrap: wrap; }
+  figure { width: 70%; }
+  .fotos figure { width: 45%; }
+  .indice { columns: 1; }
+  h2 { font-size: 20pt; }
+}
+@media print { .barra { display: none; } }
+</style>
+</head>
+<body>
+<div class="barra"><span>Instructivo · Tortas Tetor</span><a href="Instructivo_Tortas_Tetor.pdf" download>Descargar en PDF</a></div>
+
+<!-- ============================== PORTADA ============================== -->
+<div class="portada">
+  <img src="img/logo.png" alt="Tortas Tetor">
+  <h1>Instructivo de la app</h1>
+  <div class="sub">Punto de venta de Tortas Tetor</div>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div style="font-size:13pt">Cómo usarla desde cero: entrar, vender, cobrar, imprimir,<br>pedidos, corte de caja, reportes y configuración.</div>
+  <div class="datos">Versión 2.3 · Noviembre de 2026<br>Las fotos son de la tablet. Las ventas, nombres y montos que aparecen en ellas son de ejemplo.</div>
+</div>
+
+<!-- ============================== ÍNDICE ============================== -->
+<div>
+  <h2>Contenido</h2>
+  <div class="franjas" style="width:100%;margin:0 0 14px"><div class="a" style="height:4px;margin:2px 0"></div><div class="r" style="height:4px;margin:2px 0"></div></div>
+  <ul class="indice">
+    <li><span>1</span>Lo que necesitas</li>
+    <li><span>2</span>Instalar y actualizar la app</li>
+    <li><span>3</span>La primera vez: la cuenta de Google</li>
+    <li><span>4</span>La impresora, el cajón y dos impresoras</li>
+    <li><span>5</span>¿Quién atiende? Entrar con tu PIN</li>
+    <li><span>6</span>Abrir el turno</li>
+    <li><span>7</span>La pantalla de Ventas</li>
+    <li><span>8</span>Tomar un pedido y armar la torta</li>
+    <li><span>9</span>Para aquí, para llevar o a domicilio</li>
+    <li><span>10</span>Cobrar</li>
+    <li><span>11</span>Mandar sin cobrar y la sección Pedidos</li>
+    <li><span>12</span>Más opciones de Ventas</li>
+    <li><span>13</span>Ventas del día: cancelar y devolver</li>
+    <li><span>14</span>Meseros y Cocina</li>
+    <li><span>15</span>Subcorte: sacar billetes</li>
+    <li><span>16</span>Corte de caja</li>
+    <li><span>17</span>Reportes</li>
+    <li><span>18</span>Clientes, posadas y eventos</li>
+    <li><span>19</span>Productos e inventario</li>
+    <li><span>20</span>Configuración</li>
+    <li><span>21</span>El personal y sus puestos</li>
+    <li><span>22</span>Respaldos y la nube</li>
+    <li><span>23</span>Una noche de trabajo, paso a paso</li>
+    <li><span>24</span>Si algo no funciona</li>
+  </ul>
+
+  <div class="nota" style="margin-top:22px"><b>Cómo leer este instructivo.</b> Los botones se escriben así:
+    <span class="boton">COBRAR</span>, <span class="boton amarillo">MANDAR SIN COBRAR</span>, <span class="boton blanco">Sin imprimir</span>.
+    «Menú ☰» es el botón de tres rayitas arriba a la izquierda, y «⋮» son los tres puntitos de arriba a la derecha.</div>
+  <div class="nota"><b>Este instructivo siempre a la mano:</b> en la app, <b>Menú ☰ &gt; Instructivo (cómo usar la app)</b>, o en la página <b>betoavila92389-oss.github.io/tortastetor/instructivo</b>. Se lee en el navegador y ahí mismo se descarga en PDF.</div>
+  <div class="tip"><b>Lo más importante en una línea:</b> cada noche se <b>abre el turno</b>, se vende y cobra en <b>Ventas</b>, y al cerrar se hace el <b>corte</b>. Lo demás es para cuando haga falta.</div>
+</div>
+
+<!-- ============================== 1 ============================== -->
+<div class="seccion">
+  <h2><span class="n">1</span>Lo que necesitas</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <table>
+    <tr><th style="width:32%">Qué</th><th>Para qué</th></tr>
+    <tr><td><b>Tablet o celular Android</b> (8.0 o más nuevo)</td><td>Ahí se usa la app. Pueden ser varios: la tablet de la caja y los celulares de los meseros. Todos ven las mismas ventas.</td></tr>
+    <tr><td><b>Impresora JP-58H</b> (papel de 58 mm)</td><td>Imprime el ticket del cliente y la comanda para la plancha. Se conecta por Bluetooth.</td></tr>
+    <tr><td><b>Cajón de dinero</b></td><td>Va conectado a la impresora. Se abre solo al cobrar en efectivo.</td></tr>
+    <tr><td><b>Cuenta de Google del negocio</b><br>(tortastetor@gmail.com)</td><td>Con ella se juntan los aparatos y se guardan los respaldos en Google Drive. Es la misma en todos los aparatos.</td></tr>
+    <tr><td><b>Internet (Wi-Fi o datos)</b></td><td>Solo para juntar los aparatos y respaldar. <b>Sin internet se sigue vendiendo</b>: lo pendiente se sube solo cuando regresa la señal.</td></tr>
+  </table>
+
+  <h3>Quién puede hacer qué</h3>
+  <p>Cada persona entra con su nombre y su PIN, y ve solo lo de su puesto:</p>
+  <table>
+    <tr><th style="width:22%">Puesto</th><th>Lo que puede hacer</th></tr>
+    <tr><td><b>Administrador</b><br>(Héctor)</td><td>Todo: vender, cobrar, corte, subcorte, reportes, productos, inventario, configuración, personal, cancelar y devolver.</td></tr>
+    <tr><td><b>Cajero</b><br>(Kevin, Ricardo)</td><td>Vender, cobrar, mandar sin cobrar, Pedidos y Clientes. El administrador le puede dar más permisos uno por uno (por ejemplo, hacer el corte).</td></tr>
+    <tr><td><b>Mesero</b></td><td>Solo toma la orden y la manda a la cocina. No cobra.</td></tr>
+    <tr><td><b>Cocinero</b></td><td>Solo la pantalla de Cocina: ve los pedidos y los marca cuando están listos.</td></tr>
+    <tr><td><b>Todo en uno</b></td><td>Para quien atiende solo: toma la orden, cobra y ve la Cocina, pero no ve lo del administrador.</td></tr>
+  </table>
+</div>
+
+<!-- ============================== 2 ============================== -->
+<div class="seccion">
+  <h2><span class="n">2</span>Instalar y actualizar la app</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <h3>Instalarla en un aparato nuevo</h3>
+  <ol>
+    <li>En el aparato, abre Chrome y entra a:<br><b>betoavila92389-oss.github.io/tortastetor/descargas.html</b></li>
+    <li>Toca <span class="boton">Descargar la app</span> y espera a que baje (unos 6 MB).</li>
+    <li>Abre el archivo descargado y toca <b>Instalar</b>. Si Android pregunta, permite <b>instalar apps de esta fuente</b>.</li>
+    <li>Busca el ícono de <b>Tortas Tetor</b> y ábrelo.</li>
+  </ol>
+  <h3>Actualizarla</h3>
+  <p>Cuando hay una versión nueva, la app avisa con «Hay una versión nueva»: toca para instalarla. También puedes revisar en <b>Menú ☰ &gt; Buscar actualizaciones</b>. Al actualizar no se pierde nada: ventas, productos y configuración se quedan.</p>
+  <div class="ojo"><b>No desinstales la app</b> para actualizarla: al desinstalar se borra lo que está guardado solo en ese aparato. Si algún día hace falta, primero haz un respaldo (sección 22).</div>
+</div>
+
+<!-- ============================== 3 ============================== -->
+<div class="seccion">
+  <h2><span class="n">3</span>La primera vez: la cuenta de Google</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>La primera vez que abres la app en un aparato pide <b>entrar con la cuenta de Google del negocio</b>. Se hace <b>una sola vez</b> por aparato; después se entra directo a «¿Quién atiende?».</p>
+      <ol>
+        <li>Conecta el aparato a internet.</li>
+        <li>Toca <span class="boton amarillo">Entrar con Google</span>.</li>
+        <li>Elige <b>tortastetor@gmail.com</b> (la misma en todos los aparatos).</li>
+        <li>Si pregunta por <b>Google Drive</b>, toca <b>Permitir</b>: así los respaldos se guardan solos en tu Drive.</li>
+        <li>Si la cuenta ya tiene información de otro aparato, la app la baja y deja este aparato igual que los demás.</li>
+      </ol>
+      <div class="nota"><b>¿Para qué sirve?</b> Con la misma cuenta, la tablet y los celulares ven las mismas ventas, pedidos, productos y turnos al momento. Si un aparato falla, sigues cobrando en otro.</div>
+      <div class="ojo"><b>Usa siempre la misma cuenta.</b> Si un aparato entra con otra cuenta, tendrá su propia información aparte.</div>
+    </div>
+    <figure><img src="img/00_entrar_google.jpg"><figcaption>Solo la primera vez en cada aparato</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 4 ============================== -->
+<div class="seccion">
+  <h2><span class="n">4</span>La impresora y el cajón</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <h3>Emparejarla con la tablet (una sola vez)</h3>
+  <ol>
+    <li>Prende la impresora y ponle papel.</li>
+    <li>En la tablet ve a <b>Ajustes de Android &gt; Conexiones &gt; Bluetooth</b> y préndelo.</li>
+    <li>Busca la impresora (se llama <b>JP58H-…</b>) y tócala. Si pide clave, es <b>0000</b> o <b>1234</b>.</li>
+  </ol>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:4px">Elegirla en la app</h3>
+      <ol>
+        <li>Entra como administrador y ve a <b>Menú ☰ &gt; Configuración &gt; Impresora de tickets</b>.</li>
+        <li>Prende <b>Imprimir tickets</b> y deja <b>Bluetooth</b>.</li>
+        <li>Si pide permiso, toca <span class="boton amarillo">Dar permiso</span> y luego <b>Permitir</b>.</li>
+        <li>En «Elige la impresora» toca la tuya.</li>
+        <li>Toca <span class="boton">Guardar</span>.</li>
+        <li>Vuelve a entrar y toca <span class="boton blanco">Imprimir ticket de prueba</span>.</li>
+      </ol>
+      <h3>Las opciones</h3>
+      <ul>
+        <li><b>Cortar el papel al terminar:</b> apagado. La JP-58H no tiene cortador; el papel se arranca a mano.</li>
+        <li><b>Abrir el cajón de dinero:</b> prendido. Se abre al cobrar en efectivo.</li>
+        <li><b>Esperar para arrancar el ticket:</b> prendido. Al cobrar sale el ticket y la comanda espera a que la mandes (sección 10). Con las comandas en otra impresora no hace falta.</li>
+        <li><b>Comandas (cocina):</b> si tienen una segunda impresora para la plancha (ver abajo).</li>
+        <li><b>Imprimir las comandas de los demás aparatos:</b> préndelo solo en la tablet que tiene la impresora. Así, lo que manden los meseros desde su celular también sale en papel.</li>
+        <li><b>Renglones en blanco al final:</b> el espacio que queda abajo del ticket. Súbele si el final sale cortado; bájale si sobra papel.</li>
+        <li><b>Acentos y forma de imprimir:</b> déjalo en <b>Como imagen</b>. Así salen bien los acentos, la ñ y el logo.</li>
+      </ul>
+    </div>
+    <figure><img src="img/30_impresora.jpg"><figcaption>Configuración &gt; Impresora de tickets</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 4b ============================== -->
+<div class="seccion">
+  <h2><span class="n">4</span>Dos impresoras: tickets y comandas</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <p>Si tienen <b>una segunda impresora en la cocina</b>, la app manda cada papel a la suya:</p>
+  <ul>
+    <li><b>Impresora de la caja:</b> el ticket del cliente, la nota del domicilio, el corte y el subcorte. Abre el cajón.</li>
+    <li><b>Impresora de la cocina:</b> las comandas, también las que mandan los meseros desde su celular y las que se reimprimen.</li>
+  </ul>
+  <div class="fila">
+  <div class="texto">
+  <h3 style="margin-top:0">Cómo se configura</h3>
+  <ol>
+    <li>Empareja las dos impresoras en <b>Ajustes de Android &gt; Bluetooth</b> (sección 4).</li>
+    <li>En <b>Configuración &gt; Impresora de tickets</b>, en «Elige la impresora», toca la de la <b>caja</b>.</li>
+    <li>Baja hasta <b>Comandas (cocina)</b> y toca <span class="boton amarillo">Otra (Bluetooth)</span>, o <span class="boton blanco">Otra (Wi-Fi o red)</span> si la de la cocina es de red (con su dirección IP).</li>
+    <li>Toca la impresora de la <b>cocina</b> en la lista. La de los tickets dice «es la de los tickets»: no elijas esa.</li>
+    <li>Toca <span class="boton blanco">Imprimir comanda de prueba en la cocina</span> para ver que sale ahí.</li>
+    <li>Toca <span class="boton">Guardar</span>.</li>
+  </ol>
+  </div>
+  <figure><img src="img/30b_comandas_cocina.jpg"><figcaption>Configuración &gt; Impresora &gt; Comandas (cocina)</figcaption></figure>
+  </div>
+  <div class="nota"><b>Al cobrar ya no aparece «Arranca el ticket»:</b> el ticket sale en la caja y la comanda en la cocina al mismo tiempo.</div>
+  <div class="tip"><b>¿Solo tienen una impresora?</b> Deja <b>«La misma»</b> (así viene). Todo sale en la misma, como siempre, con la espera para arrancar el ticket.</div>
+  <div class="ojo">Si la impresora de la cocina está apagada o sin papel, la venta sigue y el ticket sí sale en la caja. La app avisa arriba «No se pudo imprimir (Comanda)». Reimprímela desde <b>Pedidos &gt; Reimprimir comanda</b>.</div>
+  <p>Se configura en cada aparato. Si los meseros mandan desde su celular, prende «Imprimir las comandas de los demás aparatos» en la tablet que tiene las dos impresoras.</p>
+</div>
+
+<!-- ============================== 5 ============================== -->
+<div class="seccion">
+  <h2><span class="n">5</span>¿Quién atiende? Entrar con tu PIN</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <p>Cada vez que alguien empieza a usar la app (o cuando la otra persona cierra su sesión) aparece «¿Quién atiende?». <b>Nadie entra sin su PIN</b>, así cada venta queda a nombre de quien la hizo.</p>
+  <h3>La primera vez de cada persona</h3>
+  <ol>
+    <li>Toca tu nombre y luego <span class="boton amarillo">Entrar</span>.</li>
+    <li>Escribe un <b>PIN de 4 números</b> que solo tú sepas, y otra vez abajo.</li>
+    <li>Toca <b>Guardar y entrar</b>.</li>
+  </ol>
+  <h3>Los demás días</h3>
+  <ol>
+    <li>Toca tu nombre.</li>
+    <li>Teclea tu PIN en los botones grandes. Con 4 números <b>entra solo</b> al teclear el cuarto.</li>
+  </ol>
+  <div class="fotos">
+    <figure><img src="img/01_quien_atiende_primera_vez.jpg"><figcaption>La primera vez</figcaption></figure>
+    <figure><img src="img/02_crear_pin.jpg"><figcaption>Crear el PIN</figcaption></figure>
+    <figure><img src="img/04_teclado_pin.jpg"><figcaption>Los demás días: el teclado</figcaption></figure>
+  </div>
+  <ul>
+    <li>Si tu contraseña es más larga o tiene letras, tecléala y toca <span class="boton amarillo">Entrar</span>, o toca «Mi contraseña tiene letras».</li>
+    <li>Después de 5 intentos equivocados hay que esperar unos segundos antes de volver a probar.</li>
+    <li><b>¿Se te olvidó el PIN?</b> El administrador entra a <b>Configuración &gt; Personal y puestos</b>, toca tu nombre, marca <b>«Quitar su PIN»</b> y guarda. La siguiente vez creas uno nuevo.</li>
+    <li>Al terminar tu turno: <b>Menú ☰ &gt; Cerrar sesión</b>, para que nadie venda a tu nombre.</li>
+  </ul>
+</div>
+
+<!-- ============================== 6 ============================== -->
+<div class="seccion">
+  <h2><span class="n">6</span>Abrir el turno</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>Antes de la primera venta de la noche se abre el turno con el <b>fondo de caja</b>: el dinero con el que empieza la caja para dar cambio.</p>
+      <ol>
+        <li>Al entrar el cajero o el administrador, aparece <b>Iniciar turno</b>.</li>
+        <li>Cuenta lo que hay en la caja y escribe <b>cuántos billetes y monedas</b> hay de cada uno. La suma se hace sola abajo.</li>
+        <li>Toca <span class="boton">Abrir turno</span>.</li>
+      </ol>
+      <div class="nota"><b>La noche cruza la medianoche.</b> Lo que se vende antes de las 6 a. m. cuenta para la noche anterior. Por ejemplo, una venta del sábado a la 1 a. m. sale en la noche del viernes, en el corte y en los reportes.</div>
+      <div class="tip">Un mesero no abre turno. Si un mesero manda una orden y no hay turno abierto, la app le pide que lo abra el cajero o el administrador.</div>
+      <p>El turno queda abierto aunque se cierre la app o se apague la tablet, hasta que se hace el <b>corte</b> (sección 16).</p>
+    </div>
+    <figure><img src="img/03_abrir_turno.jpg"><figcaption>Fondo de caja: aquí, un billete de $500</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 7 ============================== -->
+<div class="seccion">
+  <h2><span class="n">7</span>La pantalla de Ventas</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>Es la pantalla principal. De arriba hacia abajo:</p>
+      <ol>
+        <li><b>Barra azul:</b> <b>Menú ☰</b> (las demás secciones), el botón de <b>Ventas del día</b> (la lista) y <b>⋮</b> (más opciones).</li>
+        <li><b>Los pedidos abiertos</b> (Pedido 1, Pedido 2…) y <span class="boton">+ Nuevo</span> para empezar otro a la vez.</li>
+        <li><b>El total</b> del pedido y los botones <span class="boton amarillo">MANDAR SIN COBRAR</span> y <span class="boton">COBRAR</span>.</li>
+        <li><b>Para aquí · Para llevar · A domicilio.</b></li>
+        <li><b>Las pestañas del menú:</b> <b>★ Favoritos</b> (las tortas y bebidas de siempre), <b>Todos</b>, <b>Tortas</b> y <b>Bebidas</b>.</li>
+        <li><b>Los botones de los productos</b>, con foto y precio.</li>
+        <li><b>Lo que lleva el pedido</b>, abajo.</li>
+      </ol>
+      <div class="tip"><b>Acomodar los botones:</b> deja el dedo sobre un botón y arrástralo encima de otro para cambiarlos de lugar.</div>
+      <p>Para cambiar qué sale en <b>★ Favoritos</b>: <b>Productos</b> &gt; toca el producto &gt; <b>En Favoritos</b> (sección 19).</p>
+    </div>
+    <figure><img src="img/06_ventas.jpg"><figcaption>Ventas, lista para el primer pedido</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 8 ============================== -->
+<div class="seccion">
+  <h2><span class="n">8</span>Tomar un pedido y armar la torta</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <ol>
+        <li><b>Toca un producto</b> para agregarlo. Cada toque agrega uno más (dos toques a la Coca-Cola = 2 Coca-Colas).</li>
+        <li>Lo que se va pidiendo aparece abajo con su precio, y arriba el total.</li>
+        <li>Para <b>cambiar una torta</b>, tócala en la lista de abajo.</li>
+      </ol>
+    </div>
+    <figure><img src="img/07_ventas_pedido.jpg"><figcaption>Pedido con 2 tortas y 2 refrescos</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Armar la torta</h3>
+      <ul>
+        <li><b>– y +</b>: cuántas iguales.</li>
+        <li><b>Quitar:</b> toca lo que <b>NO</b> lleva. Se pone en rojo: «Sin aguacate».</li>
+        <li><b>Agregar:</b> los extras que se cobran (asadero, queso, aguacate, jamón, carne y piña, $10 cada uno). Se ponen en verde y se suman al precio.</li>
+        <li><b>Cómo la quiere (sin costo):</b> partida en 2, partida a la micha, con salsa o con curtidos.</li>
+        <li><b>Nota para la plancha:</b> cualquier otra indicación, por ejemplo «bien dorada».</li>
+        <li><b>Cortesía:</b> no se cobra, pero queda anotada en la venta y en los reportes. Solo la puede dar quien tiene permiso.</li>
+        <li><span class="boton">Listo</span> guarda los cambios; <span class="boton blanco">Quitar del pedido</span> la quita.</li>
+      </ul>
+      <div class="nota">Todo lo que quitas y agregas sale en la <b>comanda</b> en letras grandes: «SIN AGUACATE», «CON ASADERO EXTRA».</div>
+    </div>
+    <figure><img src="img/08_armar_torta.jpg"><figcaption>Sin aguacate, con asadero extra, partida en 2</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 9 ============================== -->
+<div class="seccion">
+  <h2><span class="n">9</span>Para aquí, para llevar o a domicilio</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <p>Arriba de los productos se elige cómo se lleva el pedido. Sale en la comanda y en el ticket.</p>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Para aquí</h3>
+      <p>Si el negocio tiene mesas dadas de alta, al tocar <b>Para aquí</b> se elige la mesa. La mesa sale en grande en la comanda y en Pedidos. También se puede poner el nombre del cliente y notas.</p>
+      <p>Las mesas se dan de alta en <b>Configuración &gt; Horario, mesas, pedidos y domicilio</b>.</p>
+      <h3>Para llevar</h3>
+      <p>Solo se toca <b>Para llevar</b>. Si quieres, pon el nombre del cliente para llamarlo cuando esté listo.</p>
+    </div>
+    <figure><img src="img/09_elegir_mesa.jpg"><figcaption>Elegir la mesa</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">A domicilio</h3>
+      <ol>
+        <li>Toca <b>A domicilio</b>.</li>
+        <li>Escribe el <b>teléfono</b>. Si esa persona ya pidió antes, <b>se llenan solos</b> su nombre, dirección y referencias, y avisa en verde cuántas veces ha pedido.</li>
+        <li>Si es nuevo, escribe nombre, dirección y referencias (color de la casa, entre qué calles).</li>
+        <li>En «¿Quién lo entrega?» pon la plataforma o el repartidor.</li>
+        <li>Toca <span class="boton">Listo</span>.</li>
+      </ol>
+      <p>El cliente se guarda solo en <b>Clientes</b> con su teléfono.</p>
+      <div class="tip">Los domicilios se pagan al recibirlos: normalmente se usa <span class="boton amarillo">MANDAR SIN COBRAR</span> y se cobra cuando regresa el pago (sección 11). Se imprime también una <b>nota para el repartidor</b> con la dirección y cuánto cobrar.</div>
+    </div>
+    <figure><img src="img/13_datos_domicilio.jpg"><figcaption>Datos del domicilio</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 10 ============================== -->
+<div class="seccion">
+  <h2><span class="n">10</span>Cobrar</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <ol>
+        <li>Toca <span class="boton">COBRAR</span>.</li>
+        <li>Elige la forma de pago: <b>Efectivo</b>, <b>Tarjeta</b>, <b>Transferencia</b> o <b>Mixto</b> (una parte de cada una).</li>
+        <li>En efectivo, toca el billete con el que paga ($200, $500, $1,000…) o escribe la cantidad. La app dice el <b>cambio</b>. Vacío o <span class="boton blanco">Exacto</span> = paga justo.</li>
+        <li>Toca <span class="boton">Cobrar e imprimir</span>, o <span class="boton blanco">Sin imprimir</span> si el cliente no quiere ticket.</li>
+      </ol>
+      <p>En efectivo <b>se abre el cajón</b> solo.</p>
+    </div>
+    <figure><img src="img/10_cobrar.jpg"><figcaption>Pagó con $500: su cambio son $220</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">El ticket y la comanda</h3>
+      <ol>
+        <li>Sale primero el <b>ticket</b> del cliente y aparece <b>«Arranca el ticket»</b>.</li>
+        <li><b>Arranca el ticket</b> y dáselo al cliente.</li>
+        <li>Toca <span class="boton">IMPRIMIR COMANDA</span>: sale la comanda para la plancha.</li>
+      </ol>
+      <p>Así no salen pegados. Si están puestas 2 copias de la comanda, el botón aparece dos veces.</p>
+      <div class="nota">Si cierras esa ventana sin tocar el botón, la comanda se imprime igual: nunca se queda un pedido sin llegar a la plancha.</div>
+      <p>Después de cobrar, arriba se queda «Pagó con… · Cambio…» y el botón <b>Ver ticket</b>, por si el cliente pregunta.</p>
+    </div>
+    <figure><img src="img/11_arranca_el_ticket.jpg"><figcaption>Arranca el ticket y luego imprime la comanda</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 10b: papel ============================== -->
+<div class="seccion">
+  <h2><span class="n">10</span>Cómo salen el ticket y la comanda</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fotos">
+    <figure style="width:2.5in"><img src="img/papel_ticket.jpg" style="border-radius:2px"><figcaption>El ticket del cliente</figcaption></figure>
+    <figure style="width:2.5in"><img src="img/papel_comanda.jpg" style="border-radius:2px"><figcaption>La comanda para la plancha</figcaption></figure>
+  </div>
+  <ul>
+    <li><b>El ticket</b> lleva el logo, los datos del negocio, folio, quién atendió, lo que se pidió con sus precios, el total, con cuánto pagó y el cambio.</li>
+    <li><b>La comanda</b> no lleva precios: el número de pedido, para aquí / llevar / domicilio y la mesa en grande, y cada torta con lo que se le quita o agrega.</li>
+    <li>Si a un pedido que ya se mandó se le agrega algo, la comanda nueva dice <b>«SE AGREGA AL PEDIDO»</b> y trae solo lo nuevo.</li>
+    <li>Qué sale y de qué tamaño se cambia en <b>Configuración &gt; Diseño del ticket y la comanda</b> (sección 20).</li>
+  </ul>
+</div>
+
+<!-- ============================== 11 ============================== -->
+<div class="seccion">
+  <h2><span class="n">11</span>Mandar sin cobrar y la sección Pedidos</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <p>Cuando el cliente paga al final (una mesa) o al recibir (un domicilio):</p>
+  <ol>
+    <li>Arma el pedido como siempre.</li>
+    <li>Toca <span class="boton amarillo">MANDAR SIN COBRAR</span>. Sale la comanda y el pedido queda en <b>Pedidos</b>, pendiente de cobrar.</li>
+  </ol>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">La sección Pedidos (Menú ☰ &gt; Pedidos)</h3>
+      <p>Cada pedido dice en grande <b>PARA AQUÍ</b> (con la mesa), <b>PARA LLEVAR</b> o <b>A DOMICILIO</b>, y si <b>FALTA COBRAR</b> o ya está <b>PAGADO</b>, con el total.</p>
+      <ul>
+        <li><span class="boton">Cobrar</span>: cuando pagan. Se cobra igual que en Ventas.</li>
+        <li><span class="boton blanco">Agregar algo</span>: lo lleva a Ventas para agregarle más (por ejemplo, otro refresco). Al mandarlo sale una comanda solo con lo nuevo.</li>
+        <li><span class="boton blanco">Ya está listo</span>: avisa que la plancha ya lo terminó.</li>
+        <li><span class="boton blanco">Reimprimir comanda</span>: si se perdió el papel.</li>
+        <li><b>Cancelar pedido</b>: si el cliente ya no lo quiso (pide el permiso de cancelar).</li>
+      </ul>
+      <p>Arriba se filtra: todos, para aquí, para llevar, a domicilio o por cobrar.</p>
+      <div class="ojo"><b>Antes del corte</b> cobra o cancela todo lo que esté en «Por cobrar». El corte avisa si quedan pedidos sin cobrar.</div>
+    </div>
+    <figure><img src="img/15_pedidos.jpg"><figcaption>Un domicilio y una mesa por cobrar</figcaption></figure>
+  </div>
+  <h3>Varios pedidos a la vez</h3>
+  <p>En la hora pico toca <span class="boton">+ Nuevo</span> para empezar otro pedido sin terminar el primero. Arriba quedan sus pestañas (Pedido 1, Pedido 2…); toca una para regresar a ella. La <b>×</b> cierra un pedido que ya no va.</p>
+</div>
+
+<!-- ============================== 12 ============================== -->
+<div class="seccion">
+  <h2><span class="n">12</span>Más opciones de Ventas (⋮)</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>Los tres puntitos <b>⋮</b> de arriba a la derecha:</p>
+      <ul>
+        <li><b>Buscar producto:</b> por nombre o código.</li>
+        <li><b>Otro producto (sin código):</b> algo que no está en el menú, con su precio a mano.</li>
+        <li><b>Entrada de efectivo:</b> dinero que entra a la caja y no es venta (por ejemplo, más cambio).</li>
+        <li><b>Salida de efectivo:</b> dinero que sale de la caja (hielo, gas, servilletas). Escribe en qué se gastó: sale en el corte.</li>
+        <li><b>Subcorte (sacar billetes):</b> sección 15.</li>
+        <li><b>Reimprimir último ticket.</b></li>
+        <li><b>Reimprimir comanda</b> del pedido que tienes en pantalla.</li>
+        <li><b>Abrir cajón</b>, sin vender.</li>
+      </ul>
+      <p>Las entradas, salidas y el subcorte son del administrador, o de quien él le dé permiso.</p>
+    </div>
+    <figure><img src="img/14_mas_opciones.jpg"><figcaption>El menú ⋮ de Ventas</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 13 ============================== -->
+<div class="seccion">
+  <h2><span class="n">13</span>Ventas del día: cancelar y devolver</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>En Ventas, el botón de la lista (arriba, junto a ⋮) abre <b>Ventas del día</b>: cada venta con folio, hora, forma de pago, quién cobró y el total. Con el calendario de arriba se ven otros días.</p>
+      <p>Toca una venta para verla:</p>
+      <ul>
+        <li><span class="boton blanco">Ticket</span>: verlo, reimprimirlo o compartirlo.</li>
+        <li><b>Devolver un artículo:</b> toca el artículo, escribe cuántos y el motivo, y toca <b>Devolver</b>. La app dice cuánto regresar y cómo.</li>
+        <li><span class="boton blanco">Cancelar venta</span>: se cancela completa. Los productos regresan al inventario.</li>
+      </ul>
+      <div class="nota"><b>Nada se borra.</b> Cancelar y devolver dejan rastro: salen en el corte y en los reportes, con quién y cuándo. Solo lo puede hacer el administrador o quien tenga ese permiso.</div>
+      <div class="tip">Un cajero ve aquí <b>«Mis ventas de hoy»</b>: solo lo que cobró él en la noche de hoy.</div>
+    </div>
+    <figure><img src="img/16_ventas_del_dia.jpg"><figcaption>Ventas del día</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 14 ============================== -->
+<div class="seccion">
+  <h2><span class="n">14</span>Meseros y Cocina</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">El mesero</h3>
+      <p>Entra con su nombre y PIN en su celular. Su pantalla se llama <b>Tomar orden</b>: arma el pedido igual que en Ventas, elige la mesa y toca <span class="boton">MANDAR A COCINA</span>.</p>
+      <ul>
+        <li>La comanda sale en la impresora de la tablet, si en esa tablet está prendido «Imprimir las comandas de los demás aparatos» (sección 4).</li>
+        <li>El pedido queda en <b>Pedidos</b> para que el cajero lo cobre.</li>
+        <li>No puede cobrar, poner precios a mano, dar cortesías ni quitar lo que ya se mandó.</li>
+      </ul>
+      <div class="ojo">El celular del mesero y la tablet de la impresora necesitan <b>internet</b> para que la comanda llegue.</div>
+    </div>
+    <figure><img src="img/37_mesero.jpg"><figcaption>Lo que ve el mesero</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">La pantalla de Cocina (opcional)</h3>
+      <p>Si en la cocina hay una tableta, ahí se ven los pedidos por preparar, el más viejo primero, con los minutos que llevan. Suena un pitido cuando llega uno.</p>
+      <ul>
+        <li>«SIN …» sale en rojo y «CON …» en verde.</li>
+        <li><span class="boton">YA ESTÁ LISTO</span> lo marca terminado; en Pedidos se ve como listo.</li>
+        <li>Abajo se puede regresar uno que se marcó por error.</li>
+      </ul>
+      <p>Se prende en <b>Configuración &gt; Horario, mesas, pedidos y domicilio &gt; Pantalla de Cocina</b>. Viene apagada, porque el negocio usa comanda en papel.</p>
+    </div>
+    <figure><img src="img/17_cocina.jpg"><figcaption>Cocina</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 15 ============================== -->
+<div class="seccion">
+  <h2><span class="n">15</span>Subcorte: sacar billetes</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>Sirve para sacar los billetes de más a media noche (por ejemplo a las 11) sin cerrar el turno: se sigue vendiendo igual.</p>
+      <ol>
+        <li><b>Corte &gt; Subcorte</b>, o en Ventas <b>⋮ &gt; Subcorte (sacar billetes)</b>.</li>
+        <li>Arriba se ve lo vendido y el efectivo que debe haber en la caja.</li>
+        <li>Escribe cuántos billetes y monedas <b>SACAS</b>. Abajo dice cuánto queda.</li>
+        <li>Toca <span class="boton">Hacer subcorte</span> y confirma.</li>
+      </ol>
+      <p>Se imprime un papel con lo retirado y una línea para la firma de quien recibe el dinero, y se abre el cajón.</p>
+      <div class="nota">En el corte final, lo que sacaste en subcortes ya se descuenta de lo que debe haber en la caja, y sí cuenta en la ganancia.</div>
+    </div>
+    <figure><img src="img/19_subcorte.jpg"><figcaption>Se sacan 2 billetes de $500</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 16 ============================== -->
+<div class="seccion">
+  <h2><span class="n">16</span>Corte de caja</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p>Al cerrar se hace el corte: <b>Menú ☰ &gt; Corte</b>. Arriba se elige <b>Turno actual</b>, <b>Turnos anteriores</b> o <b>Del día</b>.</p>
+      <ul>
+        <li><b>Ganancia hasta ahora:</b> efectivo + transferencias + tarjeta − fondo inicial. Las salidas ya van descontadas.</li>
+        <li><b>Dinero en caja:</b> fondo + ventas en efectivo − salidas − subcortes = <b>efectivo que debe haber</b>.</li>
+        <li><b>Ventas:</b> cuánto en efectivo, tarjeta y transferencia, el total vendido y cuántos tickets.</li>
+      </ul>
+      <p><span class="boton blanco">Imprimir / compartir</span> imprime el corte o lo manda por WhatsApp sin cerrar el turno.</p>
+    </div>
+    <figure><img src="img/18_corte.jpg"><figcaption>Corte del turno</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Hacer el corte (cerrar el turno)</h3>
+      <ol>
+        <li>Cobra o cancela lo que quede en <b>Pedidos</b>. Si queda algo, el corte avisa en rojo.</li>
+        <li>Si usan varios aparatos, revisa que todos tengan internet para que sus ventas ya estén subidas.</li>
+        <li>Toca <span class="boton">Hacer corte</span>.</li>
+        <li><b>Cuenta el dinero de la caja</b> y escribe cuántos billetes y monedas hay de cada uno.</li>
+        <li>Abajo se ve lo que dice la app, lo contado y la ganancia. Si no cuadra, sale el <b>sobrante</b> o <b>faltante</b>.</li>
+        <li>Toca <span class="boton">Cerrar turno</span>. Se imprime el corte y se guarda un respaldo, también en tu Google Drive.</li>
+      </ol>
+      <div class="ojo">Cerrar el turno no se puede deshacer. El corte queda guardado en «Turnos anteriores» y no se borra.</div>
+    </div>
+    <figure><img src="img/20_hacer_corte.jpg"><figcaption>Contar la caja para cerrar</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 17 ============================== -->
+<div class="seccion">
+  <h2><span class="n">17</span>Reportes</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p><b>Menú ☰ &gt; Reportes</b> (solo el administrador).</p>
+      <p><b>Cuándo:</b> Hoy, Ayer, Esta semana, Este mes, Mes anterior, Este año u Otro día.</p>
+      <p><b>Qué:</b></p>
+      <ul>
+        <li><b>Resumen:</b> lo vendido, la ganancia, cuántos tickets, el ticket promedio, los artículos y las ventas por hora.</li>
+        <li><b>Productos:</b> qué se vende más.</li>
+        <li><b>Categorías:</b> tortas contra bebidas.</li>
+        <li><b>Pagos y domicilios:</b> efectivo, tarjeta, transferencia; para aquí, para llevar y domicilio; cortesías.</li>
+        <li><b>Cajeros:</b> cuánto vendió cada quien.</li>
+      </ul>
+      <div class="tip"><b>Para que «Ganancia» sea real</b>, pon el <b>costo</b> de cada producto en Productos. Sin costo, la ganancia es igual a lo vendido.</div>
+    </div>
+    <figure><img src="img/21_reportes.jpg"><figcaption>Reporte de hoy</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 18 ============================== -->
+<div class="seccion">
+  <h2><span class="n">18</span>Clientes, posadas y eventos</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Clientes</h3>
+      <p>Los clientes de domicilio se guardan solos al pedir. En <b>Menú ☰ &gt; Clientes</b> se buscan por nombre o teléfono, se ve lo que han pedido y se corrigen sus datos. <span class="boton">Nuevo cliente</span> agrega uno a mano.</p>
+    </div>
+    <figure><img src="img/22_clientes.jpg"><figcaption>Clientes</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Posadas y eventos</h3>
+      <p>Para pedidos grandes con fecha (posadas, fiestas, escuelas):</p>
+      <ol>
+        <li><b>Menú ☰ &gt; Posadas y eventos</b> y toca <b>+</b>.</li>
+        <li>Escribe cliente, teléfono, fecha y hora, lugar, qué se lleva y el total.</li>
+        <li>Cuando dejen dinero, abre el evento y toca <span class="boton">Registrar anticipo o pago</span>. Entra a la caja como venta.</li>
+        <li>La tarjeta dice cuánto falta («Debe…»). Al entregarlo, <span class="boton blanco">Marcar terminado</span>.</li>
+      </ol>
+    </div>
+    <figure><img src="img/23_eventos.jpg"><figcaption>Una posada apartada</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 19 ============================== -->
+<div class="seccion">
+  <h2><span class="n">19</span>Productos e inventario</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p><b>Menú ☰ &gt; Productos</b>: el menú con sus precios. Arriba se busca y se filtra por categoría. <span class="boton">Nuevo producto</span> agrega uno; <b>Categorías</b> (arriba a la derecha) cambia las categorías y sus colores.</p>
+      <p>Toca un producto para cambiarlo:</p>
+      <ul>
+        <li><b>Nombre, precio de venta y costo.</b> El precio nuevo se usa desde la siguiente venta.</li>
+        <li><b>Foto del botón:</b> <span class="boton blanco">Elegir foto</span> de la galería.</li>
+        <li><b>Para las tortas:</b> lo que lleva, separado por comas. Es lo que se puede quitar al armarla.</li>
+        <li><b>Es un extra:</b> se ofrece al armar la torta («con asadero extra») en lugar de tener botón propio.</li>
+        <li><b>Controlar inventario</b>, si quieres llevar existencias.</li>
+        <li><b>Mostrar en los botones de Ventas</b> y <b>En Favoritos</b>.</li>
+      </ul>
+      <div class="ojo">Al <b>Eliminar</b> un producto, las ventas pasadas se conservan.</div>
+    </div>
+    <figure><img src="img/25_editar_producto.jpg"><figcaption>Editar la Torta Clásica</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Inventario</h3>
+      <p>Para los productos con «Controlar inventario» (por ejemplo, los refrescos):</p>
+      <ul>
+        <li><b>Existencias:</b> cuánto hay de cada uno.</li>
+        <li><b>Agregar mercancía:</b> cuando llega el proveedor (cuántos y a qué costo).</li>
+        <li><b>Ajustar existencia:</b> si al contar no cuadra.</li>
+        <li><b>Productos bajos:</b> los que llegaron al mínimo.</li>
+        <li><b>Movimientos:</b> todo lo que entró y salió.</li>
+      </ul>
+      <p>Cada venta descuenta sola; una cancelación o devolución lo regresa.</p>
+    </div>
+    <figure><img src="img/26_inventario.jpg"><figcaption>Inventario</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 20 ============================== -->
+<div class="seccion">
+  <h2><span class="n">20</span>Configuración</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p><b>Menú ☰ &gt; Configuración</b> (solo el administrador). Cada apartado tiene su <span class="boton">Guardar</span> abajo: los cambios se aplican al guardar.</p>
+      <table>
+        <tr><th>Apartado</th><th>Qué se cambia</th></tr>
+        <tr><td>Diseño del ticket y la comanda</td><td>Logo, nombre, dirección, pie, qué datos salen y el tamaño de la letra.</td></tr>
+        <tr><td>Impresora de tickets</td><td>La impresora, el cajón y la espera para arrancar el ticket (sección 4).</td></tr>
+        <tr><td>Cobro y ventas</td><td>Formas de pago, botones de productos, pedir fondo de caja.</td></tr>
+        <tr><td>Horario, mesas, pedidos y domicilio</td><td>Horario, día de descanso, mesas, opciones sin costo de las tortas, comanda y pantalla de Cocina.</td></tr>
+        <tr><td>Personal y puestos</td><td>Quién usa la app y qué puede hacer (sección 21).</td></tr>
+        <tr><td>Cuenta de Google y nube · Respaldos</td><td>Sección 22.</td></tr>
+        <tr><td>Protector de pantalla</td><td>Cuánto esperar para oscurecer la pantalla.</td></tr>
+      </table>
+    </div>
+    <figure><img src="img/27_configuracion.jpg"><figcaption>Configuración</figcaption></figure>
+  </div>
+</div>
+
+<div class="seccion">
+  <h2><span class="n">20</span>Diseño del ticket y la comanda</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fotos">
+    <figure><img src="img/28_diseno_ticket.jpg"><figcaption>Las opciones del ticket</figcaption></figure>
+    <figure><img src="img/29_diseno_vista.jpg"><figcaption>«Ver cómo queda»</figcaption></figure>
+  </div>
+  <ol>
+    <li>Arriba elige <b>Ticket de venta</b> o <b>Comanda (plancha)</b>.</li>
+    <li>Cambia lo que quieras:
+      <ul>
+        <li><b>Ticket:</b> imprimir el logo, el nombre y su tamaño, el encabezado (dirección, teléfono), qué datos salen (folio, quién atendió, mesa, cliente, lo que se quita o agrega, con cuánto pagó), el tamaño del total, la línea que separa y el pie («¡Gracias por su preferencia!», redes sociales…).</li>
+        <li><b>Comanda:</b> el título, si dice para aquí o llevar, la hora, quién la mandó, el cliente, el tamaño de la letra de las tortas, «SIN/CON» en grande, línea entre productos, precios y datos del domicilio.</li>
+      </ul>
+    </li>
+    <li>Toca <span class="boton blanco">Ver cómo queda</span>: es exactamente como sale en el papel. <span class="boton blanco">Seguir cambiando</span> regresa.</li>
+    <li>Para probar, <span class="boton blanco">Imprimir ticket de ejemplo</span> (los datos son de muestra, no es una venta).</li>
+    <li>Toca <span class="boton">Guardar</span>. El diseño pasa solo a los demás aparatos.</li>
+  </ol>
+</div>
+
+<div class="seccion">
+  <h2><span class="n">20</span>Cobro, horario, mesas y protector</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fotos">
+    <figure><img src="img/31_cobro.jpg"><figcaption>Cobro y ventas</figcaption></figure>
+    <figure><img src="img/32_horario.jpg"><figcaption>Horario, mesas, pedidos y domicilio</figcaption></figure>
+  </div>
+  <h3>Cobro y ventas</h3>
+  <p>Qué formas de pago aparecen al cobrar, además del efectivo: tarjeta, transferencia, vales, crédito a clientes y dólares (con su tipo de cambio). También si se ven los botones de productos en Ventas y si se pide el fondo de caja al abrir el turno.</p>
+  <h3>Horario, mesas, pedidos y domicilio</h3>
+  <ul>
+    <li><b>Horario</b> y <b>día de descanso</b> (martes).</li>
+    <li><b>La noche de trabajo:</b> hasta qué hora de la madrugada cuenta como la noche anterior (6 a. m.).</li>
+    <li><b>Comanda:</b> imprimirla o no y cuántas copias; si Pedidos enseña también lo cobrado; la pantalla de Cocina.</li>
+    <li><b>Opciones sin costo de las tortas:</b> una por renglón (partida en 2, a la micha, con salsa, con curtidos).</li>
+    <li><b>Mesas:</b> agregar o quitar. Sin mesas, «Para aquí» solo pide el nombre.</li>
+    <li><b>Domicilio:</b> quién entrega normalmente.</li>
+  </ul>
+  <h3>Protector de pantalla</h3>
+  <p>Si nadie toca la tablet, se oscurece con el logo para que no se maltrate la pantalla ni se gaste la batería. Se elige a cuántos minutos. <b>Con un toque se regresa</b> a donde ibas.</p>
+</div>
+
+<!-- ============================== 21 ============================== -->
+<div class="seccion">
+  <h2><span class="n">21</span>El personal y sus puestos</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <p><b>Configuración &gt; Personal y puestos.</b></p>
+      <h3>Agregar a alguien</h3>
+      <ol>
+        <li>Toca <span class="boton">Agregar persona</span>.</li>
+        <li>Escribe su <b>nombre</b> y un <b>usuario</b> corto (por ejemplo «laura»).</li>
+        <li>Deja el PIN vacío: lo crea la persona la primera vez que entra.</li>
+        <li>Elige su <b>puesto</b>: mesero, cajero, cocinero, todo en uno o administrador.</li>
+        <li>A un cajero o «todo en uno» se le pueden dar <b>permisos extra</b> uno por uno: hacer el corte, subcorte, reportes, cancelar ventas, entradas y salidas…</li>
+        <li>Toca <span class="boton">Guardar</span>.</li>
+      </ol>
+      <h3>Cambiar o quitar</h3>
+      <ul>
+        <li>Toca su nombre para cambiar su puesto o permisos.</li>
+        <li><b>Olvidó su PIN:</b> marca «Quitar su PIN» y guarda.</li>
+        <li><b>Ya no trabaja aquí:</b> <span class="boton blanco">Eliminar</span>. Sus ventas pasadas se conservan.</li>
+      </ul>
+      <div class="ojo">Siempre debe quedar al menos un administrador.</div>
+    </div>
+    <figure><img src="img/33_personal.jpg"><figcaption>Personal y puestos</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 22 ============================== -->
+<div class="seccion">
+  <h2><span class="n">22</span>Respaldos y la nube</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Cuenta de Google y nube</h3>
+      <ul>
+        <li><b>Sincronización «Al día»:</b> todo lo de este aparato ya está en la nube. Si dice que hay cambios pendientes, falta internet: se suben solos al volver la señal.</li>
+        <li><b>Respaldos en Google Drive:</b> uno por día, en la carpeta «Tortas Tetor - Respaldos» de tu Drive. Se sube al salir de la app y al hacer el corte. <span class="boton blanco">Subir respaldo a Drive ahora</span> lo hace en ese momento.</li>
+        <li><b>Recuperar un respaldo de Drive:</b> para dejar un aparato como estaba en una fecha.</li>
+      </ul>
+      <div class="ojo"><b>No toques «Salir de la cuenta de Google»</b> salvo que vayas a cambiar de cuenta: después hay que volver a entrar con internet.</div>
+    </div>
+    <figure><img src="img/34_nube.jpg"><figcaption>Cuenta de Google y nube</figcaption></figure>
+  </div>
+  <div class="fila">
+    <div class="texto">
+      <h3 style="margin-top:0">Respaldos en la tablet</h3>
+      <ul>
+        <li>La app guarda sola <b>un respaldo al día</b> en la tablet y conserva los últimos 30.</li>
+        <li><span class="boton amarillo">Guardar respaldo en…</span> lo guarda donde quieras: Drive, USB, descargas, o lo mandas por WhatsApp.</li>
+        <li><b>Cargar un respaldo</b> pasa toda la información a otro aparato.</li>
+      </ul>
+      <h3>Si se pierde o se descompone la tablet</h3>
+      <ol>
+        <li>Instala la app en el aparato nuevo (sección 2).</li>
+        <li>Entra con la misma cuenta de Google (sección 3): <b>baja sola toda la información</b>.</li>
+        <li>Empareja la impresora (sección 4).</li>
+      </ol>
+    </div>
+    <figure><img src="img/35_respaldos.jpg"><figcaption>Respaldos</figcaption></figure>
+  </div>
+</div>
+
+<!-- ============================== 23 ============================== -->
+<div class="seccion">
+  <h2><span class="n">23</span>Una noche de trabajo, paso a paso</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <h3>Al abrir (6 p. m.)</h3>
+  <ol class="lista-noche">
+    <li>Prende la tablet y la impresora. Revisa que tenga papel y que el cajón esté conectado.</li>
+    <li>Abre la app, toca tu nombre y teclea tu PIN.</li>
+    <li>Cuenta el fondo de caja y toca <span class="boton">Abrir turno</span>.</li>
+  </ol>
+  <h3>Durante la noche</h3>
+  <ol class="lista-noche">
+    <li><b>Cliente en mostrador:</b> toca los productos → arma la torta si hace falta → <span class="boton">COBRAR</span> → <span class="boton">Cobrar e imprimir</span> → arranca el ticket → <span class="boton">IMPRIMIR COMANDA</span>.</li>
+    <li><b>Mesa que paga al final:</b> Para aquí → mesa → productos → <span class="boton amarillo">MANDAR SIN COBRAR</span>. Al pagar: Pedidos → <span class="boton">Cobrar</span>.</li>
+    <li><b>Domicilio:</b> A domicilio → teléfono (se llenan sus datos) → productos → <span class="boton amarillo">MANDAR SIN COBRAR</span>. Cuando regresa el pago: Pedidos → <span class="boton">Cobrar</span>.</li>
+    <li><b>Se agrega algo a una mesa:</b> Pedidos → <span class="boton blanco">Agregar algo</span> → productos → mandar.</li>
+    <li><b>Gastos de la caja:</b> ⋮ → Salida de efectivo.</li>
+    <li><b>Mucho dinero en la caja:</b> ⋮ → Subcorte (sacar billetes).</li>
+  </ol>
+  <h3>Al cerrar</h3>
+  <ol class="lista-noche">
+    <li>Pedidos → cobra o cancela todo lo que esté «Por cobrar».</li>
+    <li>Corte → <span class="boton">Hacer corte</span> → cuenta la caja → <span class="boton">Cerrar turno</span>.</li>
+    <li>Guarda el papel del corte con el dinero.</li>
+    <li>Menú ☰ → Cerrar sesión.</li>
+  </ol>
+  <div class="tip">El martes es el día de descanso: si se abre el turno ese día (por ejemplo para un evento), la app solo avisa y deja vender normal.</div>
+</div>
+
+<!-- ============================== 24 ============================== -->
+<div class="seccion">
+  <h2><span class="n">24</span>Si algo no funciona</h2>
+  <div class="franjas"><div class="a"></div><div class="r"></div></div>
+  <table class="apretada">
+    <tr><th style="width:34%">Qué pasa</th><th>Qué hacer</th></tr>
+    <tr><td><b>Sale «No se pudo imprimir»</b></td><td>La venta <b>sí se guardó</b>. Revisa que la impresora esté prendida, con papel y cerca, y que el Bluetooth de la tablet esté prendido. Luego reimprime: ⋮ → Reimprimir último ticket, o Pedidos → Reimprimir comanda.</td></tr>
+    <tr><td><b>La impresora no imprime nada</b></td><td>Apágala y préndela. En Configuración → Impresora de tickets revisa que esté elegida la correcta y toca «Imprimir ticket de prueba».</td></tr>
+    <tr><td><b>Salen letras raras o sin acentos</b></td><td>Configuración → Impresora → Acentos y forma de imprimir → <b>Como imagen</b> → Guardar.</td></tr>
+    <tr><td><b>El final del ticket sale cortado, o sobra papel</b></td><td>Configuración → Impresora → «Renglones en blanco al final»: súbele o bájale.</td></tr>
+    <tr><td><b>La comanda no sale en la impresora de la cocina</b></td><td>Revisa que esté prendida y con papel. En Configuración → Impresora → Comandas (cocina), que esté elegida la de la cocina, y toca «Imprimir comanda de prueba en la cocina».</td></tr>
+    <tr><td><b>El ticket y la comanda salen pegados</b></td><td>Configuración → Impresora → prende «Esperar para arrancar el ticket».</td></tr>
+    <tr><td><b>No se abre el cajón</b></td><td>Revisa el cable del cajón a la impresora y que «Abrir el cajón de dinero» esté prendido. ⋮ → Abrir cajón para probar. Si no hay luz, ábrelo con la llave.</td></tr>
+    <tr><td><b>Se olvidó el PIN</b></td><td>El administrador: Configuración → Personal y puestos → su nombre → «Quitar su PIN» → Guardar.</td></tr>
+    <tr><td><b>No hay internet</b></td><td>Se sigue vendiendo normal. Lo pendiente se sube solo cuando regresa. Lo que se manda desde el celular del mesero sí necesita internet para llegar a la impresora.</td></tr>
+    <tr><td><b>La app pide «Entrar con Google»</b></td><td>Conecta a internet y entra con la <b>misma cuenta</b> de siempre. La información no se pierde.</td></tr>
+    <tr><td><b>Un aparato no ve lo del otro</b></td><td>Los dos necesitan internet y la misma cuenta de Google (Configuración → Cuenta de Google y nube).</td></tr>
+    <tr><td><b>Una venta se cobró mal</b></td><td>Ventas del día → la venta → Cancelar venta (o devolver un artículo) y vuelve a cobrarla bien.</td></tr>
+    <tr><td><b>Un producto nuevo no aparece en Ventas</b></td><td>Está en la pestaña «Todos». Para que salga en ★ Favoritos: Productos → el producto → «En Favoritos».</td></tr>
+    <tr><td><b>No sé cómo hacer algo</b></td><td>Menú ☰ → <b>Instructivo (cómo usar la app)</b>: abre este instructivo en el navegador (necesita internet).</td></tr>
+    <tr><td><b>Cualquier otra falla</b></td><td>Menú ☰ → <b>Reportar un error</b>. Manda lo que pasó; también se puede desde la pantalla de «¿Quién atiende?».</td></tr>
+  </table>
+  <p class="pie">Tortas Tetor · Más que una torta, ¡una tradición en Delicias!<br>Av. Agricultura Nte. 105, Sector Oriente, Delicias, Chih. · Tel. y WhatsApp 639 167 5285</p>
+</div>
+
+</body>
+</html>
